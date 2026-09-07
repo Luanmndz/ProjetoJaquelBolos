@@ -1,0 +1,25 @@
+
+nav{
+    background-color: rgb(139, 43, 23)
+}
+nav a{
+    color: white;
+    font-size: 30px; 
+    text-align: center;
+    text-decoration: none;
+}
+nav a img{
+    height: 60px;
+}
+
+footer{
+    background-color: rgb(122, 24, 19);
+ 
+}
+
+
+footer a{
+    text-decoration: none;
+    color: white;
+    
+}

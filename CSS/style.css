@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', monospace;
+}
 
+/* Para usar as cores daqui coloca var(e o texo) exp: color: var(--branco); */
+:root {
+    --marrom-claro: #814F31;
+    --marrom-escuro: #603B25;
+    --rosa: #F27C9C;
+    --amarelo: #FDFAB5;
+    --preto:  #000;
+    --branco: #F4F4F4;
+}

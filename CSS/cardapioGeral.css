@@ -1,0 +1,111 @@
+/* Configuração da seção que segura todos os produtos */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+/* O "Card" de cada produto individual */
+.produto-item {
+  background-color: #ffffff; /* Fundo do card em branco para contrastar */
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+/* Título do Produto (ex: Mini Bolos) */
+.produto-item h4 {
+  font-size: 1rem;
+  color: #888888;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+ 
+/* Estilização da Imagem e aplicação da cor de fundo #fdfab5 */
+.produto-item img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: contain; /* Garante que a imagem não distorça */
+  background-color: #fdfab5; /* Cor de fundo amarela solicitada */
+  border-radius: 8px;
+  padding: 10px;
+  mix-blend-mode: multiply; /* Remove o fundo branco original da foto */
+  margin-bottom: 12px;
+}
+ 
+/* Tags de texto (Nome do sabor e Preço) */
+.produto-item span {
+  display: block;
+  font-size: 1.1rem;
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+ 
+/* Altera especificamente o segundo span (que é o preço) */
+.produto-item span:last-of-type {
+  color: #f27c9c; /* Cor rosa nos preços para combinar */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+ 
+/* --- BOTÕES E LINKS --- */
+ 
+/* Estilização Geral para os Botões e Link de Voltar */
+.produtos button,
+.produtos a {
+  display: inline-block;
+  background-color: #f27c9c; /* Cor rosa solicitada */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+/* Efeito ao passar o mouse nos botões */
+.produtos button:hover,
+.produtos a:hover {
+  background-color: #e06385; /* Um rosa ligeiramente mais escuro no hover */
+}
+ 
+/* --- RODAPÉ (FOOTER) --- */
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fdfab5; /* Fundo do rodapé combinando com o fundo das fotos */
+  margin-top: 4px;
+}
+ 
+footer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f27c9c; /* Botões das redes sociais em rosa */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+ 
+footer a img {
+  width: 20px;
+  height: 20px;
+}
+ 

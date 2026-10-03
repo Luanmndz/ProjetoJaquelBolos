@@ -1,0 +1,159 @@
+.container-carrinho 
+{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.container-carrinho h3 
+{
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.btn-carrinho 
+{
+    font-size: 1.2rem;
+    background-color: var(--marrom-escuro);
+    color: var(--branco);
+    border: 2px solid var(--preto);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn-carrinho:hover 
+{
+    background-color: var(--amarelo);
+    color: var(--preto);
+}
+
+
+.pop-up 
+{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 500px;
+    max-height: 400px;
+    background-color: var(--branco);
+    border: 1px solid var(--preto);
+    border-radius: 16px;
+    padding: 10px 24px;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+.pop-up.ativo 
+{
+    display: block;
+}
+
+
+
+.item-carrinho 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid var(--marrom-claro);
+    padding: 12px 0;
+    gap: 15px;
+}
+
+
+.container-img 
+{
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-produto 
+{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.info-item 
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-item span 
+{
+    font-weight: 500;
+}
+
+.botoes 
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.botoes button 
+{
+    font-size: 1.3rem;
+    border: none;
+    background: transparent;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoes button:hover 
+{
+    color: var(--marrom-escuro);
+}
+
+.botoes button * 
+{
+    pointer-events: none;
+}
+
+.valorTotal 
+{
+    font-weight: bold;
+    text-align: right;
+}
+
+.pop-up-inferior {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.btnFinalizar 
+{
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--marrom-claro);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btnFinalizar:hover {
+    background-color: var(--marrom-escuro);
+    color: var(--branco);
+}
+

@@ -9,38 +9,47 @@
     <link rel="stylesheet" href="CSS/quem-somos.css">
     <link rel="stylesheet" href="CSS/carrinho.css">
     <link rel="stylesheet" href="CSS/cardapio.css">
+    <link rel="stylesheet" href="CSS/teste.css">
    
 </head>
 <body>
     <!-- cabecalho, navbar do site -->
  <header class="cabeçalho">
-    <nav> 
+    <nav class="navbar"> 
         <a  class="link-navbar" href="#Home"> <img class="imagemLogo" src="IMAGENS/LOGO/jauqe.png" alt="" ></a>
  
-        <a class="link-navbar" href="#QuemSomos"> Quem Somos </a>
+        <a class="link-navbar" href="#Cardapio"> Cardápio  </a>
 
-        <a class="link-navbar" href="#Cardapio"> Cardápio </a></button>
+        <a class="link-navbar" href="#QuemSomos">Quem Somos </a></button>
 
-        <a class="link-navbar" href="#Carrinho"><img src="IMAGENS/ICONES/carrinho.png">  </a> <!--iCONE ESTA BRANCO-->
     </nav>
+
+      <!-- carrosel -->
+<div class="carousel">
+    <div class="group">
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo1.jpg" alt="Bolo redondo" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo10.jpg"  alt="Bolo redondo" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo11.jpg"  alt="Bolo redondo" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo2.jpg"  alt="Bolo redondo" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo3.jpg"  alt="Bolo redondo" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo4.jpg" alt="Bolo redondo" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo5.jpg" alt="Bolo redondo" class="foto-carrosel"></div>
+    </div>
+
+    <!-- cópia idêntica do grupo acima, para o loop contínuo -->
+    <div class="group" aria-hidden="true">
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo6.jpg" alt="" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo7.jpg"  alt="" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo8.jpg"  alt="" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo9.jpg"  alt="" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo1.jpg"  alt="" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo2.jpg" alt="" class="foto-carrosel"></div>
+        <div class="card"><img src="IMAGENS/FotosCarrossel/bolo3.jpg" alt="" class="foto-carrosel"></div>
+    </div>
+</div>
+
 </header>
-    <!--  ESTRUTURA HOME-->
-
-    <section id="Home" class="pagina-inicial">
-        <div class="pagina-home ">
-            <img class="foto-principal" src="" alt="foto de um bolo">
-            <h1 class="frase-home"> Jaquel Bolos - onde cada doce conta uma <span class="span-historia">
-            história. </span></h1>
-        </div>
-    </section>
-
-    <!-- ESTRUTURA QUEM SOMOS -->
-    <section id="QuemSomos" class="pagina-quemsomos">
-        <div class="pagina-quemsomos">
-            <img src="IMAGENS/FOTO DO PROFISSIONAL/FotoDaProfissional.jpg" alt="foto da profissional">
-            <p class="frase-quemsomos"> historia da profissional </p>
-        </div>
-    </section>
+    
     <!-- ESTRUTURA CARDAPIO -->
     <!-- Cardapio -->
     <section class="foto-bolo">
@@ -78,54 +87,40 @@
 
         </div>    
     </section>
+
+    <!--  ESTRUTURA HOME-->
+    <section class="PgQuemSomos"> 
+    <section class="interno">
+    <section id="Home" class="pagina-inicial">
+        <div class="pagina-home ">
+            <h1 class="frase-home"> Jaquel Bolos - onde cada doce conta uma <span class="span-historia">
+            história. </span></h1>
+        </div>
     </section>
-    <!-- carrosel -->
-      <section id="Cardapio" class="catalogo">
-    <h1 class="frase-cardapio"> Vejam alguns dos nossos Bolos</h1>  
 
-    <div class="carousel">
-        <div class="group">
-            <div class="card"> 
-                <img src="IMAGENS/PRODUTOS/BolosRedondos/bolo12.jpg" alt="" class="foto-carrosel">
-             </div>
+    <!-- ESTRUTURA QUEM SOMOS -->
+    <section id="QuemSomos" class="pagina-quemsomos">
+        <div class="pagina-quemsomos">
+            <img src="IMAGENS/FOTO DO PROFISSIONAL/FotoDaProfissional.jpg" alt="foto da profissional" class="foto-profissional">
+            <p class="frase-quemsomos"> Minha trajetória começou quando eu tinha apenas 16 anos, idade em que descobri o meu verdadeiro amor: a confeitaria. <br> <br>
 
-            <div class="card">
-                <img src="IMAGENS/PRODUTOS/BolosRedondos/bolo1.jpg" alt="" class="foto-carrosel">
-            </div>
+            Tudo começou de forma simples, fazendo bolos para familiares e celebrando juntos momentos e datas especiais. Foi então que percebi que poderia transformar esse amor em um propósito: fazer o que realmente amo e levar alegria para outras pessoas através dos meus bolos. <br> <br>
 
-            <div class="card"> 
-                <img src="IMAGENS/PRODUTOS/BolosRedondos/bolo2.jpg" alt="" class="foto-carrosel">
-            </div>
+            Com esse sonho e muita dedicação, busquei me especializar cada vez mais para oferecer aos meus clientes bolos deliciosos, feitos com carinho e que se tornassem parte de momentos inesquecíveis. <br> <br>
 
-            <div class="card">
-                <img src="IMAGENS/PRODUTOS/BolosRedondos/bolo9.jpg" alt="" class="foto-carrosel">
-            </div>
+            Hoje, sigo realizando esse sonho através das minhas vendas, colocando amor em cada criação. Para mim, vender bolos é muito mais do que um trabalho: é uma forma de levar felicidade à minha família e a cada pessoa que prova um pedacinho do meu trabalho. </p>
         </div>
-        <!-- inverso do carrosel -->
-        <div aria-hidden class="group">
-            <div class="card">
-                <img src="IMAGENS/PRODUTOS/BolosRedondos/bolo3.jpg" alt="" class="foto-carrosel">
-            </div>
+    </section>
+    </section>
+    </section>
 
-            <div class="card">
-                <img src="IMAGENS/PRODUTOS/BolosRedondos/bolo12.jpg" alt="" class="foto-carrosel">
-            </div>
-
-            <div class="card">
-                <img src="IMAGENS/PRODUTOS/BolosRedondos/bolo10.jpg" alt="" class="foto-carrosel">
-            </div>
-
-            <div class="card">
-                <img src="IMAGENS/PRODUTOS/BolosRedondos/bolo11.jpg" alt="" class="foto-carrosel">
-            </div>
-        </div>
-    </div>
+  
 <!-- CARRINHO -->
 
 <!-- FOOTER -->
  <footer>
-    <a href=""> <img src="IMAGENS/ICONES/whatsapp.png" alt="whatsapp"> whatsapp</a> <!--OS ICONES ESTAO NA COR BRANCA-->
-     <a href=""> <img src="IMAGENS/ICONES/instagram.png" alt="Instagram"> Instagram </a> <!--OS ICONES ESTAO NA COR BRANCA-->
+    <a href=""> <img src="IMAGENS/ICONES/whatsapp.png" alt="whatsapp" class="icone-footer"> whatsapp</a> <!--OS ICONES ESTAO NA COR BRANCA-->
+     <a href=""> <img src="IMAGENS/ICONES/instagram.png" alt="Instagram" class="icone-footer"> Instagram </a> <!--OS ICONES ESTAO NA COR BRANCA-->
  </footer>
 
  <script src="JS/carrinho.js"></script>

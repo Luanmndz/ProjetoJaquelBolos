@@ -1,0 +1,145 @@
+/* PARTE DO CARROSSEL */
+.carousel {
+    margin: 60px auto;
+    width: 90%;
+    display: flex;
+    overflow: hidden;            
+    pointer-events: none;       
+    user-select: none;
+    /* esmaece as pontas, em vez de cortar com borda */
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+
+/* véu claro para o fundo não brigar com as fotos */
+.catalogo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 240, 243, 0.55);   
+}
+.catalogo > * {
+    position: relative;          
+}
+
+.group {
+    display: flex;
+    flex-shrink: 0;             
+    min-width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.2em;
+    padding-right: 1.2em;       
+    animation: spin 25s infinite linear;
+}
+
+.card {
+    flex: 0 0 250px;
+    height: 320px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(52, 6, 2, 0.3);
+}
+
+.foto-carrosel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes spin {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+
+/* Cardapio */
+
+/* ESTRUTURA DO CARDÁPIO */
+.foto-bolo h2 {
+    background-color: #FBC5C7;
+    color: #340602;
+    text-align: center;
+    font-size: clamp(22px, 4vw, 30px);   /* cresce/diminui com a tela */
+    padding: 10px 0;
+}
+
+.caixa-principal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+.card-bolo {
+    width: 100%;                 
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card-bolo img {
+    width: 100%;
+    aspect-ratio: 1 / 1;  
+    height: auto;
+    object-fit: cover;          
+    border-radius: 15px 15px 0 0;
+    display: block;
+}
+
+.card-bolo h3,
+.frase-bolo {
+    padding: 0 16px;
+}
+
+.link-card {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 22px;
+}
+
+/* TABLET: 2 colunas */
+@media (max-width: 992px) {
+    .caixa-principal {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 40px 24px;
+    }
+}
+
+/* CELULAR: 1 coluna */
+@media (max-width: 600px) {
+    .caixa-principal {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 30px 16px;
+        justify-items: center;
+    }
+    .card-bolo {
+        max-width: 360px;        
+    }
+
+    /* aproveita para ajustar o carrossel também */
+    .carousel {
+        width: 100%;
+        margin: 30px auto;
+    }
+    .card {
+        flex: 0 0 180px;
+        height: 240px;
+    }
+    .group {
+        animation-duration: 18s;
+    }
+    .frase-cardapio {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+}

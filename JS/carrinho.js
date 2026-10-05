@@ -1,4 +1,6 @@
-let carrinho = [];
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+atualizarCarrinho();
+
 let btn = document.querySelectorAll(".btnAdicionar");
 
 btn.forEach((botao) => {
@@ -22,7 +24,7 @@ btn.forEach((botao) => {
         }
 
         atualizarCarrinho();
-
+        salvarDados();
     });
 });
 
@@ -108,8 +110,8 @@ function atualizarCarrinho() {
             if (itemEncontrado) {
                 itemEncontrado.quantidade++;
             }
-
             atualizarCarrinho();
+            salvarDados();
         });
     });
 
@@ -131,6 +133,7 @@ function atualizarCarrinho() {
                 }
             }
                 atualizarCarrinho();
+                salvarDados();
         });
     });
 
@@ -144,6 +147,7 @@ function atualizarCarrinho() {
             carrinho = carrinho.filter((item) => item.id !== idRemover);
 
             atualizarCarrinho();
+            salvarDados();
         })
     })
 }
@@ -171,3 +175,7 @@ document.addEventListener("click", (e) => {
 })
 
 document.addEventListener("DOMContentLoaded", atualizarCarrinho)
+// persiste os dados 
+function salvarDados(){
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+}

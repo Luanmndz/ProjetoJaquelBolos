@@ -1,8 +1,12 @@
 nav{
-    background-color: #F27C9C
+    background-color: #603B25;
+    background-image: url('../IMAGENS/FUNDO/FUNDO.2.png');
+    width: 100%;
+
 }
+
 nav a{
-    color: #340602;
+    color: white;
     font-size: 30px; 
     text-align: center;
     text-decoration: none;
@@ -22,12 +26,18 @@ nav a img{
     margin: 0;
 }
 
+.imagemLogo{
+    height: 100px;
+}
+
+
 footer{
     background-color: #FBC5C7;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 
 footer a{

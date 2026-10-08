@@ -1,3 +1,5 @@
+
+
 /* PARTE DO CARROSSEL */
 .carousel {
     margin: 60px auto;
@@ -59,14 +61,6 @@
 /* Cardapio */
 
 /* ESTRUTURA DO CARDÁPIO */
-.foto-bolo h2 {
-    background-color: #FBC5C7;
-    color: #340602;
-    text-align: center;
-    font-size: clamp(22px, 4vw, 30px);   /* cresce/diminui com a tela */
-    padding: 10px 0;
-}
-
 .caixa-principal {
     display: grid;
     grid-template-columns: repeat(4, 1fr);   

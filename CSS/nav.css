@@ -1,12 +1,11 @@
 nav{
-    background-color: #603B25;
-    background-image: url('../IMAGENS/FUNDO/FUNDO.2.png');
+    background-color: #35170e;
     width: 100%;
 
 }
 
 nav a{
-    color: white;
+    color: #F5ECDA;
     font-size: 30px; 
     text-align: center;
     text-decoration: none;
@@ -28,6 +27,10 @@ nav a img{
 
 .imagemLogo{
     height: 100px;
+}
+
+.link-navbar{
+    font-family: 'Lobster Two', sans-serif;
 }
 
 

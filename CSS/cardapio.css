@@ -59,7 +59,6 @@ h2{
 }
 .card-bolo{
     width: 300px;
-    background-color: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
@@ -100,17 +99,151 @@ h2{
 .text-cardapio::before {
     content: "";
     position: absolute;
-    top: -80px; /* Altura do efeito de mesclagem */
+    top: -80px;
     left: 0;
     width: 100%;
     height: 80px;
-    /* Usa a mesma cor exata de fundo (#2E1713) sumindo gradualmente para o transparente */
     background: linear-gradient(to top, #2E1713 0%, rgba(46, 23, 19, 0) 100%);
-    pointer-events: none; /* Garante que cliques passem direto por ele se necessário */
+    pointer-events: none; 
+}
+.text-cardapio {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+    background-color: #2E1713;
+    position: relative; 
+}
+.text-cardapio::before {
+    content: "";
+    position: absolute;
+    top: -80px; 
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, #2E1713 0%, rgba(46, 23, 19, 0) 100%);
+    pointer-events: none; 
+}
+.text-cardapio::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, #2E1713 0%, rgba(46, 23, 19, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
 }
 
-.fundo-cardapio{
-    background-image: url('../IMAGENS/FUNDO/jaquel.jpg');
-    max-width: 100%;
-    max-height: 100%;
+ /*fundo do cardápio  */
+.caixa-principal {
+    
+    background-image: url('../IMAGENS/FUNDO/jaquel.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px; 
 }
+
+/* CONTAINER DO CARD */
+.card-bolo {
+    width: 300px;
+    background-color: #ffffff; /* Fundo branco para destacar o texto */
+    border: 2px solid #2E1713; /* Borda com a cor principal da tabela do site */
+    border-radius: 20px; 
+    box-shadow: 0 8px 20px rgba(46, 23, 19, 0.15); /* Sombra suave usando o tom do site */
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Efeito flutuante ao passar o mouse */
+.card-bolo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(46, 23, 19, 0.3);
+    border-color: #d4af37; /* A borda muda para um tom dourado sutil ao passar o mouse */
+}
+
+/* FOTO DO BOLO */
+.card-bolo img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    object-position: center;
+    border-bottom: 2px solid #2E1713; /* Linha divisória idêntica ao acabamento da tabela */
+}
+
+/* TÍTULO DO CARD (Combinando com a escrita do cabeçalho) */
+.card-bolo h3 {
+    font-family: 'Lobster Two', sans-serif; 
+    color: #2E1713; /* Mesmo tom marrom */
+    font-size: 26px;
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+
+/* TEXTO / DESCRIÇÃO */
+.frase-bolo {
+    font-family: sans-serif;
+    color: #5c4a47; /* Marrom suave para leitura confortável */
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 25px;
+    flex-grow: 1; 
+}
+
+/* LINK E BOTÃO "VEJA MAIS" */
+.link-card {
+    text-decoration: none;
+    width: 80%; 
+}
+
+.link-card button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #2E1713; /* Fundo marrom escuro igual à tabela */
+    color: #F5ECDA; /* Texto bege claro idêntico à escrita "Cardapio" */
+    border: 1px solid #d4af37; /* Detalhe em borda dourada fina */
+    border-radius: 25px; 
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase; /* Deixa o texto em caixa alta para dar aspecto de menu */
+    letter-spacing: 1px; /* Espaçamento elegante entre as letras */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efeito invertido ao passar o mouse no botão */
+.link-card button:hover {
+    background-color: #F5ECDA; /* Inverte: fundo fica bege */
+    color: #2E1713; /* Texto fica marrom */
+    border-color: #2E1713;
+}
+
+/* Efeito de clique */
+.link-card button:active {
+    transform: scale(0.96);
+}
+
+
+/* teste */
+
+.card-bolo {
+    width: 300px;
+    background-color: #F5EADD; /* Substitui o branco por este bege acolhedor */
+    border: 2px solid #2E1713; 
+    border-radius: 20px; 
+    box-shadow: 0 8px 20px rgba(46, 23, 19, 0.25); 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+

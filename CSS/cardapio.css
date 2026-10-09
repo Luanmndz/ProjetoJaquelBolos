@@ -1,6 +1,5 @@
-/* PARTE DO CARROSEL */
+/* 1. PARTE DO CARROSEL */
 .carousel {
-
     margin: 100px auto;
     width: 60%;
     border: 5px transparent;
@@ -17,6 +16,7 @@
     animation: spin 15s infinite linear;
     padding-right: 1em;
 }
+
 .card {
     flex: 0 0 250px;
     height: 300px;
@@ -24,6 +24,7 @@
     overflow: hidden;
     padding: 0;
 }
+
 .foto-carrosel {
     width: 100%;
     height: 100%;
@@ -31,83 +32,15 @@
     display: block;
     border-radius: 15px;
 }
+
 .carousel::-webkit-scrollbar {
     display: none;
 }
+
 @keyframes spin {
-    from {
-        translate: 0;
-    }
-
-    to {
-        translate: -100%;
-    }
+    from { translate: 0; }
+    to { translate: -100%; }
 }
-/* ESTRUTURA DO FUNDO */
-
-h2{
-    font-family: 'Lobster Two', sans-serif;
-    color: #F5ECDA;
-    text-align: center;
-    font-size: 60px;
-}
-.caixa-principal{
-    display: flex;
-    justify-content: center;
-    gap: 110px;
-    padding: 50px;
-}
-.card-bolo{
-    width: 300px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-.card-bolo img{
-    width: 100%;
-    height: 300px;
-    border-radius: 20px;
-    background-color: #F5EADD;
-}
-
-.text-cardapio{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0px;
-    background-color: #2E1713;
-
-}
-
-/* ESTRUTURA DO FUNDO */
-
-h2{
-    font-family: 'Lobster Two', sans-serif;
-    color: #F5ECDA;
-    text-align: center;
-    font-size: 60px;
-}
-
-/* ALTERADO: Adicionado position relative para ancorar a transição */
-.text-cardapio{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0px;
-    background-color: #2E1713;
-    position: relative; 
-}
-
-/* NOVO: Elemento que cria o efeito de fusão/fade de baixo para cima */
-.text-cardapio::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to top, #2E1713 0%, rgba(46, 23, 19, 0) 100%);
-    pointer-events: none;
-}
-
-/* teste */
 
 h2 {
     font-family: 'Lobster Two', sans-serif;
@@ -121,20 +54,19 @@ h2 {
     padding-top: 30px;
     padding-bottom: 30px;
     margin: 0px;
-    background-color: #2E1713; /* Cor sólida marrom no centro */
+    background-color: #2E1713; 
     position: relative; 
-    z-index: 2; /* Garante que o texto fique acima dos efeitos */
+    z-index: 2; 
 }
 
 /* Transição "espumada" para CIMA */
 .text-cardapio::before {
     content: "";
     position: absolute;
-    top: -79px; /* Ajuste fino para não deixar frestas */
+    top: -79px; 
     left: 0;
     width: 100%;
     height: 80px;
-    /* Suaviza da cor marrom para transparente subindo */
     background: linear-gradient(to top, #2E1713 0%, rgba(46, 23, 19, 0) 100%);
     pointer-events: none; 
 }
@@ -143,50 +75,136 @@ h2 {
 .text-cardapio::after {
     content: "";
     position: absolute;
-    bottom: -79px; /* Ajuste fino para não deixar frestas */
+    bottom: -79px;
     left: 0;
     width: 100%;
     height: 80px;
-    /* Suaviza da cor marrom para transparente descendo */
     background: linear-gradient(to bottom, #2E1713 0%, rgba(46, 23, 19, 0) 100%);
     pointer-events: none;
 }
 
-.fundo-cardapio {
-    /* Ajustado para a imagem de fundo preencher corretamente abaixo do efeito */
-    background-image: url('../IMAGENS/FUNDO/jaquel.jpg');
-    background-repeat: repeat;
-    background-color: #F5EADD;
-    width: 100%;
-    padding-top: 60px;
-    z-index: 1;
+.card-bolo {
+    width: 300px;
+    border-radius: 20px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+    background-color: #F5EADD !important; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 25px;
+    border: 2px solid #2E1713; 
 }
 
-.fundo-cardapio {
-    background-image: url('../IMAGENS/FUNDO/jaquel.jpg');
-    background-repeat: repeat;
-    background-position: center;
-    background-color: #f7e0ce; 
-    background-blend-mode: multiply;
-    opacity: 0.95;
+/* Ajuste das imagens dos bolos */
+.card-bolo img {
     width: 100%;
-    padding-top: 100px;
-    padding-bottom: 80px;
+    height: 300px;
+    object-fit: contain; 
+    background-color: #F5EADD !important; 
+    border-radius: 20px 20px 0 0; 
+    display: block;
+}
+
+/* Título interno do bolo */
+.card-bolo h3 {
+    font-family: 'Lobster Two', sans-serif; 
+    color: #2E1713;
+    font-size: 26px;
+    margin: 20px 0 10px 0;
+}
+
+/* Frase descritiva */
+.frase-bolo {
+    font-family: sans-serif;
+    color: #4A2E2B;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    min-height: 45px;
+}
+
+/* Link e Botão */
+.link-card {
+    text-decoration: none;
+    width: 80%;
+}
+
+.card-bolo button {
+    width: 100%;
+    background-color: #2E1713; 
+    color: #F5ECDA;
+    border: none;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-bolo button:hover {
+    background-color: #4A2E2B; 
+    transform: scale(1.03);
+}
+
+#Cardapio {
+    position: relative;
+    width: 100%;
+    background-image: url('../IMAGENS/FUNDO/jaquel.jpg');
+    background-repeat: no-repeat;      
+    background-position: center;       
+    background-size: cover; 
+    background-color: #2E1713;
+}
+
+.caixa-principal {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 120px;
+    box-sizing: border-box;
     position: relative;
     z-index: 1;
 }
 
-/* botão */
+/* EFEITO DE AMPLIAR OS CARDS */
 
-button{
-    border-radius: 15px;
-    padding: 10px 40px;
-    background-color: #2E1713;
-    color: #F5EADD;
-    border: 1px solid #2E1713;
+.card {
+    transition: transform 0.3s ease;
 }
 
-button:hover{
-    background-color: bisque;
-    color: #2E1713;
+.card:hover {
+    transform: scale(1.1);
 }
+
+.card-bolo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card-bolo:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+    z-index: 10; 
+}
+
+/* Alvo exclusivo para diminuir os desenhos dos bolos */
+.img-bolo-card {
+    width: 150px !important;    
+    height: 150px !important;   
+    object-fit: contain; 
+    display: block;
+    margin: 30px auto 10px;    
+    background-color: transparent !important;
+}
+
+/* TESTE */
+
+html {
+    scroll-behavior: smooth; /* Faz a subida ser lenta e nativa pelo CSS */
+}
+

@@ -10,6 +10,7 @@
 
 body {
     font-family: 'Montserrat', monospace;
+    background-color: #33170c;
 }
 
 /* Para usar as cores daqui coloca var(e o texo) exp: color: var(--branco); */
@@ -22,3 +23,36 @@ body {
     --branco: #F4F4F4;
     --fundo: #3d1b12;
 } 
+
+/* Botão footer */
+
+#btnSubir {
+    position: absolute;  /* Muda de fixed para absolute */
+    right: 20px;         /* Afasta da borda direita da barra rosa */
+    top: 50%;            /* Alinha verticalmente no meio */
+    transform: translateY(-50%); /* Ajuste fino para centralizar perfeito */
+    width: 35px;         /* Ajustei o tamanho para encaixar melhor na barra */
+    height: 35px;
+    background-color: #2E1713; 
+    color: #F5ECDA;            
+    border: 1px solid #F5EADD;
+    border-radius: 50%;       
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse (mantendo a centralização) */
+#btnSubir:hover {
+    background-color: #4A2E2B;
+    transform: translateY(-50%) scale(1.1); 
+}
+
+footer {  /* Ou troque pelo nome da classe da sua barra rosa, ex: .barra-rodape */
+    position: relative; /* Isso cria a "âncora" para o botão não fugir */
+    
+    /* Mantenha o restante dos seus estilos que já estão aqui (como o background rosa) */
+}
+

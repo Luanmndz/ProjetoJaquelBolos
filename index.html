@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="CSS/cardapio.css">
     <link rel="stylesheet" href="CSS/teste.css">
     <link rel="stylesheet" href="CSS/baner.css">
-
 </head>
 
 <body>
@@ -30,7 +29,7 @@
 
             <a class="link-navbar" href="#Cardapio"> Cardápio </a>
 
-            <a class="link-navbar" href="#QuemSomos">Quem Somos </a></button>
+            <a class="link-navbar" href="#QuemSomos">Quem Somos </a>
         </nav>
     </header>
 
@@ -51,28 +50,28 @@
         <div class="caixa-principal">
 
             <div class="card-bolo">
-                <img src="IMAGENS/FOTO CARDAPIO/sem fundo/bolo1.png" alt="bolo Redondo decorado">
+                <img src="IMAGENS/FOTO CARDAPIO/sem fundo/bolo1.png" alt="bolo Redondo decorado" class="img-bolo-card">
                 <h3>Bolos Redondos</h3>
                 <p class="frase-bolo">Deliciosos bolos artesanais feitos para transformar momentos em memórias.</p>
                 <a class="link-card" href="./HTML/bolosredondos.html"> <button> Veja Mais</button> </a>
             </div>
 
             <div class="card-bolo">
-                <img src="IMAGENS/FOTO CARDAPIO/sem fundo/bolo2.png" alt="Mini Bolos">
+                <img src="IMAGENS/FOTO CARDAPIO/sem fundo/bolo2.png" alt="Mini Bolos" class="img-bolo-card">
                 <h3>Mini Bolos</h3>
                 <p class="frase-bolo">Pequenos, delicados e cheios de sabor para adoçar o seu dia.</p>
                 <a class="link-card" href="HTMl/MiniBolos.html"> <button> Veja Mais</button> </a>
             </div>
 
             <div class="card-bolo">
-                <img src="IMAGENS/FOTO CARDAPIO/sem fundo/bolo3.png" alt="bolo quadrado">
+                <img src="IMAGENS/FOTO CARDAPIO/sem fundo/bolo3.png" alt="bolo quadrado" class="img-bolo-card">
                 <h3>Bolos Quadrados</h3>
                 <p class="frase-bolo">Elegância e sabor em cada detalhe, perfeitos para celebrar.</p>
                 <a class="link-card" href="HTML/BolosQuadrados.html"> <button> Veja Mais</button> </a>
             </div>
 
             <div class="card-bolo">
-                <img src="IMAGENS/FOTO CARDAPIO/sem fundo/bolo4.png" alt="bolo quadrado">
+                <img src="IMAGENS/FOTO CARDAPIO/sem fundo/bolo4.png" alt="bolo quadrado" class="img-bolo-card">
                 <h3>Bolos Decorados</h3>
                 <p class="frase-bolo">Lindo por fora, perfeito por dentro.</p>
                 <a class="link-card" href="HTML/BolosDecorados.html"> <button> Veja Mais</button> </a>
@@ -120,9 +119,34 @@
         </a> <!--OS ICONES ESTAO NA COR BRANCA-->
         <a href=""> <img src="IMAGENS/ICONES/instagram.png" alt="Instagram" class="icone-footer"> </a>
         <!--OS ICONES ESTAO NA COR BRANCA-->
+        <!-- Botão de Voltar ao Topo -->
+        <button id="btnSubir" onclick="subirSuave()">▲</button>
     </footer>
 
     <script src="JS/carrinho.js"></script>
+    <!-- script de subida suave -->
+    <script>
+let animacaoScroll; 
+function subirSuave() {
+    const posicaoAtual = document.documentElement.scrollTop || document.body.scrollTop;
+  
+    if (posicaoAtual < 1) {
+        window.scrollTo(0, 0);
+        cancelAnimationFrame(animacaoScroll);
+        return; // Encerra a função aqui
+    }
+   
+    window.scrollTo(0, posicaoAtual - posicaoAtual / 14);
+    
+    animacaoScroll = window.requestAnimationFrame(subirSuave);
+}
+
+window.addEventListener('wheel', () => cancelAnimationFrame(animacaoScroll));
+window.addEventListener('touchmove', () => cancelAnimationFrame(animacaoScroll));
+</script>
+
+
+
 </body>
 
 </html>

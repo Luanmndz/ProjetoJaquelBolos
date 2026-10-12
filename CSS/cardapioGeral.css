@@ -1,69 +1,122 @@
-/* Configuração da seção que segura todos os produtos */
 .produtos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Exatamente 4 bolos por fileira em telas grandes */
   gap: 20px;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 }
  
-/* O "Card" de cada produto individual */
+/* Deixa o link/botão de VOLTAR acima de tudo e ocupando a largura total */
+.produtos > a:first-child {
+  grid-column: 1 / -1;
+  justify-self: start;  
+  margin-bottom: 10px;
+}
+ 
 .produto-item {
-  background-color: #ffffff; /* Fundo do card em branco para contrastar */
-  border-radius: 12px;
+  background-color: #fdfab5; /* Fundo inteiro do card*/
+  border-radius: 20px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
  
-/* Título do Produto (ex: Mini Bolos) */
 .produto-item h4 {
-  font-size: 1rem;
-  color: #888888;
-  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #9c058a; /* titulo do card*/
+  margin: 0 0 12px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 700;
 }
  
-/* Estilização da Imagem e aplicação da cor de fundo #fdfab5 */
 .produto-item img {
   width: 100%;
   max-width: 200px;
   height: 200px;
-  object-fit: contain; /* Garante que a imagem não distorça */
-  background-color: #fdfab5; /* Cor de fundo amarela solicitada */
+  object-fit: contain;
+  background-color: #ffffff; /* cor de fundo do hover da mensagem com a descriçao*/
   border-radius: 8px;
   padding: 10px;
-  mix-blend-mode: multiply; /* Remove o fundo branco original da foto */
-  margin-bottom: 12px;
+  mix-blend-mode: multiply;
+  margin-bottom: 14px;
+  transition: opacity 0.3s ease;
 }
  
-/* Tags de texto (Nome do sabor e Preço) */
+.produto-item span:first-of-type {
+  width: 100%;
+}
+ 
+.produto-item span:first-of-type::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background-color: #f27c9c !important;
+  border: none;
+  border-radius: 0;
+  margin: 0 auto 12px auto;
+}
+ 
 .produto-item span {
   display: block;
   font-size: 1.1rem;
-  color: #333333;
+  color: #db9b9b; /* cor dos nomes dos bolos*/
   font-weight: 600;
   margin-bottom: 4px;
 }
  
-/* Altera especificamente o segundo span (que é o preço) */
 .produto-item span:last-of-type {
-  color: #f27c9c; /* Cor rosa nos preços para combinar */
+  color: #eb0b47; /*cor dos preços*/
   font-size: 1.2rem;
   font-weight: bold;
 }
  
-/* --- BOTÕES E LINKS --- */
+/* --- EFEITO DE HOVER DINÂMICO (TEXTO MARROM E CENTRALIZADO) --- */
+.produto-item::after {
+  content: attr(data-detalhes); /* Puxa o texto diretamente do atributo data-detalhes do HTML */
+  white-space: pre-wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(253, 250, 181, 0.96); /* Fundo bege translúcido */
+  color: #3d1b12; /* Texto do hover na cor marrom */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  box-sizing: border-box;
+}
  
-/* Estilização Geral para os Botões e Link de Voltar */
+/* Mostra a mensagem ao passar o mouse */
+.produto-item:hover::after {
+  opacity: 1;
+  pointer-events: auto;
+}
+ 
+/* --- BOTÕES E LINKS --- */
 .produtos button,
 .produtos a {
   display: inline-block;
-  background-color: #f27c9c; /* Cor rosa solicitada */
+  background-color: #f27c9c;
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -73,12 +126,13 @@
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.2s;
+  z-index: 3; /* Garante que o botão fique clicável acima do efeito */
+  margin-top: 8px;
 }
  
-/* Efeito ao passar o mouse nos botões */
 .produtos button:hover,
 .produtos a:hover {
-  background-color: #e06385; /* Um rosa ligeiramente mais escuro no hover */
+  background-color: #e06385;
 }
  
 /* --- RODAPÉ (FOOTER) --- */
@@ -87,15 +141,15 @@ footer {
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  background-color: #fdfab5; /* Fundo do rodapé combinando com o fundo das fotos */
-  margin-top: 4px;
+  background-color: #fdfab5;
+  margin-top: 20px;
 }
  
 footer a {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #3d1b12; /* Botões das redes sociais em rosa */
+  background-color: #3d1b12;
   color: #ffffff;
   text-decoration: none;
   padding: 8px 16px;
@@ -109,3 +163,15 @@ footer a img {
   height: 20px;
 }
  
+/* --- RESPONSIVIDADE PARA CELULARES E TABLETS --- */
+@media (max-width: 1024px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr); /* 2 bolos por linha em tablets */
+  }
+}
+ 
+@media (max-width: 600px) {
+  .produtos {
+    grid-template-columns: 1fr; /* 1 bolo por linha em celulares */
+  }
+}

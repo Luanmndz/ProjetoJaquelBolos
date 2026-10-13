@@ -13,3 +13,4 @@ links.forEach(link => {
         menuLinks.classList.remove('ativo');
     });
 });
+

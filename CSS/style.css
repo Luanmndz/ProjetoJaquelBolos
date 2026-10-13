@@ -22,3 +22,15 @@ body {
     --branco: #F4F4F4;
     --fundo: #3d1b12;
 } 
+
+.swal2-popup {
+    width: 20% !important;
+    font-size: 0.50rem !important;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .swal2-popup {
+        width: 50% !important;
+    }
+}

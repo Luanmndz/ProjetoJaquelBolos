@@ -38,6 +38,7 @@
     position: absolute;
     top: 50px;
     right: 0;
+    width: 100%;
     width: 500px;
     max-height: 400px;
     background-color: var(--branco);
@@ -157,3 +158,20 @@
     color: var(--branco);
 }
 
+@media (max-width: 768px){
+    .pop-up.ativo {
+        max-width: 250px;
+    }
+
+    .item-carrinho {
+        flex-direction: column;
+    }
+    
+    .item-carrinho span {
+        text-align: center;
+    }
+    .valorTotal {
+        text-align: center;
+        margin: 10px 0px;
+    }
+}   

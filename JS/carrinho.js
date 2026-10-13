@@ -14,6 +14,14 @@ btn.forEach((botao) => {
         let preco = parseFloat(e.target.dataset.preco);
         let img = e.target.dataset.img;
 
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `${e.target.dataset.nome} foi adicionado com sucesso!`,
+            showConfirmButton: false,
+            timer: 1500
+        });
+
         let itemExistente = carrinho.find((item) => item.id === id)
 
         if (itemExistente) {
@@ -36,44 +44,49 @@ function atualizarCarrinho() {
 
     itens.innerHTML = " ";
 
-    if (carrinho.length === 0) 
-        {
-            valorTotal.style.display = "none";
-            btnFinalizar.innerHTML = "Comece seu Pedido";
-            
-        }
-    else 
-        {
-            valorTotal.style.display = "block"
-            btnFinalizar.innerHTML = "Finalize seu pedido <i class='bi bi-whatsapp'></i>"
-        }
+    if (carrinho.length === 0) {
+        valorTotal.style.display = "none";
+        btnFinalizar.innerHTML = "Comece seu Pedido";
+
+    }
+    else {
+        valorTotal.style.display = "block"
+        btnFinalizar.innerHTML = "Finalize seu pedido <i class='bi bi-whatsapp'></i>"
+    }
 
     carrinho.forEach((item) => {
 
         let subtotal = item.preco * item.quantidade;
         total = subtotal + total;
 
+        let detalhesPersonalizados = "";
+        if (item.massa || item.recheio || item.kg) {
+            detalhesPersonalizados = `
+                <br><span> Personalizacões: </span>
+                <span><strong>Massa:</strong> ${item.massa || 'Padrão'}</span>
+                <span><strong>Recheio:</strong> ${item.recheio || 'Padrão'}</span>
+                <span><strong>Kg:</strong> ${item.kg || '1kg'}</span>
+               
+            `;
+        }
+
         itens.innerHTML +=
             `
                 <div class="item-carrinho"> 
                     <div class="container-img">
-
                         <img src="${item.img}" class="img-produto" alt="${item.nome}"> 
-
                     </div>
 
                     <div class="info-item">
-
                         <span><strong>Nome:</strong> ${item.nome}</span>
-
                         <span><strong>Quantidade:</strong> ${item.quantidade}</span>
-
                         <span><strong>Preço:</strong> R$ ${subtotal.toFixed(2)}</span>
-
+                         ${detalhesPersonalizados}
                     </div>
 
-                    <div class="botoes">
+                   
 
+                    <div class="botoes">
                         <button class="aumentarValor" data-id="${item.id}">
                             <i class="bi bi-plus-circle-fill"></i>
                         </button>
@@ -85,17 +98,16 @@ function atualizarCarrinho() {
                         <button class="delete" data-id="${item.id}">
                             <i class="bi bi-trash3"></i>
                         </button>
-
                     </div>
                 </div>
-            `
+            `;
     });
-// area de valores dinamicos (valor total e contador do carrinho:))
+    // area de valores dinamicos (valor total e contador do carrinho:))
     valorTotal.innerHTML = `<div class = "valorTotal"><span> Valor Total: R$ ${total.toFixed(2)} </span></div>`
 
 
     let totalItens = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
-        document.getElementById("contador-carrinho").innerHTML = totalItens
+    document.getElementById("contador-carrinho").innerHTML = totalItens
 
 
     // Botao de Aumentar
@@ -124,16 +136,16 @@ function atualizarCarrinho() {
 
             let itemRemover = carrinho.find((item) => item.id === itemExistente);
 
-            if (itemRemover){
+            if (itemRemover) {
                 if (itemRemover.quantidade > 1) {
                     itemRemover.quantidade--
                 }
                 else {
-                carrinho = carrinho.filter((item) => item.id !== itemExistente);
+                    carrinho = carrinho.filter((item) => item.id !== itemExistente);
                 }
             }
-                atualizarCarrinho();
-                salvarDados();
+            atualizarCarrinho();
+            salvarDados();
         });
     });
 
@@ -150,6 +162,9 @@ function atualizarCarrinho() {
             salvarDados();
         })
     })
+
+
+
 }
 
 // para fechar o pop se clicar no carrinho ou fora do pop
@@ -176,6 +191,6 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("DOMContentLoaded", atualizarCarrinho)
 // persiste os dados 
-function salvarDados(){
+function salvarDados() {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }

@@ -1,14 +1,15 @@
+
 .produtos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Exatamente 4 bolos por fileira em telas grandes */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #d29f7f;
 }
  
-/* Deixa o link/botão de VOLTAR acima de tudo e ocupando a largura total */
 .produtos > a:first-child {
   grid-column: 1 / -1;
   justify-self: start;  
@@ -16,7 +17,7 @@
 }
  
 .produto-item {
-  background-color: #fdfab5; /* Fundo inteiro do card*/
+  background-color:var(--amarelo); /* Fundo inteiro do card*/
   border-radius: 20px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -81,7 +82,7 @@
   font-weight: bold;
 }
  
-/* --- EFEITO DE HOVER DINÂMICO (TEXTO MARROM E CENTRALIZADO) --- */
+
 .produto-item::after {
   content: attr(data-detalhes); /* Puxa o texto diretamente do atributo data-detalhes do HTML */
   white-space: pre-wrap;
@@ -135,33 +136,6 @@
   background-color: #e06385;
 }
  
-/* --- RODAPÉ (FOOTER) --- */
-footer {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  background-color: #fdfab5;
-  margin-top: 20px;
-}
- 
-footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #3d1b12;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-family: sans-serif;
-}
- 
-footer a img {
-  width: 20px;
-  height: 20px;
-}
  
 /* --- RESPONSIVIDADE PARA CELULARES E TABLETS --- */
 @media (max-width: 1024px) {

@@ -1,0 +1,181 @@
+#btnSubir {
+    position: absolute;  /* Muda de fixed para absolute */
+    right: 20px;         /* Afasta da borda direita da barra rosa */
+    top: 50%;            /* Alinha verticalmente no meio */
+    transform: translateY(-50%); /* Ajuste fino para centralizar perfeito */
+    width: 35px;         /* Ajustei o tamanho para encaixar melhor na barra */
+    height: 35px;
+    background-color: #2E1713; 
+    color: #F5ECDA;            
+    border: 1px solid #F5EADD;
+    border-radius: 50%;       
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse (mantendo a centralização) */
+#btnSubir:hover {
+    background-color: #4A2E2B;
+    transform: translateY(-50%) scale(1.1); 
+}
+
+footer {  /* Ou troque pelo nome da classe da sua barra rosa, ex: .barra-rodape */
+    position: relative; /* Isso cria a "âncora" para o botão não fugir */
+    
+    /* Mantenha o restante dos seus estilos que já estão aqui (como o background rosa) */
+}
+
+/* Rodapé no mesmo estilo da navbar: listras marrons + degradê, sem ondas */
+.rodape {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: var(--amarelo, #FDFAB5);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(var(--marrom-claro-rgb, 129, 79, 49), 1) 0%,
+            rgba(var(--marrom-claro-rgb, 129, 79, 49), 0.85) 25%,
+            rgba(var(--marrom-claro-rgb, 129, 79, 49), 0.45) 55%,
+            rgba(var(--marrom-claro-rgb, 129, 79, 49), 0) 100%
+        ),
+        repeating-linear-gradient(
+            90deg,
+            var(--marrom-escuro, #603B25),
+            var(--marrom-escuro, #603B25) 25px,
+            var(--marrom-claro, #814F31) 25px,
+            var(--marrom-claro, #814F31) 50px
+        );
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    max-width: var(--largura-navbar, 1300px);
+    margin: 0 auto;
+    padding: 36px 40px 24px;
+    box-sizing: border-box;
+}
+
+/* Logo (cresce ao passar o mouse, igual à da navbar) */
+.rodape-logo img {
+    height: 62px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.rodape-logo:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2) sepia(0.3);
+}
+
+/* Localização */
+.rodape-local {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.icone-sp {
+    width: 26px;
+    height: 26px;
+    color: var(--rosa, #F27C9C);
+}
+
+/* Redes sociais */
+.rodape-redes {
+    display: flex;
+    gap: 28px;
+}
+
+.rodape-rede {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--amarelo, #FDFAB5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.rodape-rede:hover {
+    color: white;
+}
+
+/* Texto "WhatsApp" / "Instagram" cresce ao passar o mouse */
+.rodape-rede > span:last-child {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: left center;
+}
+
+.rodape-rede:hover > span:last-child {
+    transform: scale(1.15);
+}
+
+.rodape-rede-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--marrom-escuro,);
+    transition: transform 0.3s ease;
+}
+
+.rodape-rede:hover .rodape-rede-icone {
+    transform: scale(1.1);
+}
+
+.rodape-rede-icone img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* Direitos autorais */
+.rodape-direitos {
+    max-width: var(--largura-navbar, 1300px);
+    margin: 0 auto;
+    padding: 14px 40px 22px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+}
+
+.rodape-direitos p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+/* --- Celulares e tablets --- */
+@media (max-width: 768px) {
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 24px 18px;
+        gap: 18px;
+    }
+
+    .rodape-redes {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .rodape-direitos {
+        padding: 14px 24px 20px;
+    }
+}

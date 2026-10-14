@@ -3,7 +3,7 @@ let fecharForms = document.querySelector("#fecharForms");
 let nomeForms = document.querySelector("#forms-bolo-nome");
 let precoForms = document.querySelector("#forms-bolo-preco");
 let btnPersonalizar = document.querySelectorAll(".btnPersonalizar");
-let pedidoForms = document.querySelector("#forms"); 
+let pedidoForms = document.querySelector("#forms");
 let boloAtual = null;
 
 // Quando clica no botão "Personalizar" de qualquer card
@@ -31,7 +31,7 @@ btnPersonalizar.forEach((botao) => {
 
         // 3. Adiciona a classe para disparar a animação (deslizando da direita para a esquerda)
         caixaFormulario.classList.add('open');
-        
+
     });
 });
 
@@ -44,13 +44,13 @@ if (fecharForms) {
 };
 
 // Envio do formulário (adicionando ao carrinho)
-if (pedidoForms){
+if (pedidoForms) {
     pedidoForms.addEventListener("submit", (item) => {
         item.preventDefault();
 
-        
 
-        if (!boloAtual){
+
+        if (!boloAtual) {
             return;
         }
 
@@ -58,34 +58,40 @@ if (pedidoForms){
         let precoNumerico = parseFloat(precoTexto.replace("R$", "").replace(",", ".").trim()) || 0;
 
         let produtoFormatado = {
-            id : boloAtual.getAttribute('data-id'),
-            tipo : boloAtual.getAttribute('data-tipo'),
-            nome : boloAtual.getAttribute('data-nome'),
-            preco : precoNumerico,
-            img : boloAtual.getAttribute('data-img'),
-            
+            id: boloAtual.getAttribute('data-id'),
+            tipo: boloAtual.getAttribute('data-tipo'),
+            nome: boloAtual.getAttribute('data-nome'),
+            preco: precoNumerico,
+            img: boloAtual.getAttribute('data-img'),
+
             // Personalizações escolhidas
-            massa : pedidoForms.elements['massa'].value,
-            kg : pedidoForms.elements['kilos'].value,
-            recheio : pedidoForms.elements['recheios'].value,
+            massa: pedidoForms.elements['massa'].value,
+            kg: pedidoForms.elements['kilos'].value,
+            recheio: pedidoForms.elements['recheios'].value,
             quantidade: 1
         };
 
         carrinho.push(produtoFormatado);
-        
+
         atualizarCarrinho();
         salvarDados();
-        
-        // Fecha o formulário e limpa
-       
+
+
         Swal.fire({
-            position: "top-end",
+            toast: true,
+            position: "bottom-end",
             icon: "success",
-            title: `${boloAtual.dataset.nome} foi adicionado com sucesso!`,
+            title: `${boloAtual.dataset.nome} foi personalizado e adicionado!`,
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000,
+            customClass: {
+                popup: 'meu-toast-personalizado'
+            },
+            background: "#603B25",
+            color: "#F4F4F4",
+            iconColor: "#FDFAB5"
         });
-        caixaFormulario.classList.remove('ativo');
+        caixaFormulario.classList.remove('open');
         pedidoForms.reset();
         boloAtual = null;
     });

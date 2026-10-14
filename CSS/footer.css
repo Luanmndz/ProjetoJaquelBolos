@@ -1,9 +1,9 @@
 #btnSubir {
-    position: absolute;  /* Muda de fixed para absolute */
-    right: 20px;         /* Afasta da borda direita da barra rosa */
-    top: 50%;            /* Alinha verticalmente no meio */
-    transform: translateY(-50%); /* Ajuste fino para centralizar perfeito */
-    width: 35px;         /* Ajustei o tamanho para encaixar melhor na barra */
+    position: absolute; 
+    right: 20px;  
+    top: 50%;     
+    transform: translateY(-50%); 
+    width: 35px;     
     height: 35px;
     background-color: #2E1713; 
     color: #F5ECDA;            
@@ -15,26 +15,22 @@
     z-index: 10;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
-
-/* Efeito ao passar o mouse (mantendo a centralização) */
 #btnSubir:hover {
-    background-color: #4A2E2B;
+    background-color:var(--marrom-escuro);
     transform: translateY(-50%) scale(1.1); 
 }
 
-footer {  /* Ou troque pelo nome da classe da sua barra rosa, ex: .barra-rodape */
-    position: relative; /* Isso cria a "âncora" para o botão não fugir */
-    
-    /* Mantenha o restante dos seus estilos que já estão aqui (como o background rosa) */
+footer {
+    position: relative; 
 }
 
-/* Rodapé no mesmo estilo da navbar: listras marrons + degradê, sem ondas */
 .rodape {
     position: relative;
     width: 100%;
     box-sizing: border-box;
     font-family: sans-serif;
-    color: var(--amarelo, #FDFAB5);
+    color: white;
+    transition: transform 0.3s ease, filter 0.3s ease;
     background:
         linear-gradient(
             180deg,
@@ -63,7 +59,6 @@ footer {  /* Ou troque pelo nome da classe da sua barra rosa, ex: .barra-rodape 
     box-sizing: border-box;
 }
 
-/* Logo (cresce ao passar o mouse, igual à da navbar) */
 .rodape-logo img {
     height: 62px;
     width: auto;
@@ -76,7 +71,7 @@ footer {  /* Ou troque pelo nome da classe da sua barra rosa, ex: .barra-rodape 
     filter: brightness(1.2) sepia(0.3);
 }
 
-/* Localização */
+
 .rodape-local {
     display: flex;
     align-items: center;
@@ -91,7 +86,6 @@ footer {  /* Ou troque pelo nome da classe da sua barra rosa, ex: .barra-rodape 
     color: var(--rosa, #F27C9C);
 }
 
-/* Redes sociais */
 .rodape-redes {
     display: flex;
     gap: 28px;
@@ -103,13 +97,13 @@ footer {  /* Ou troque pelo nome da classe da sua barra rosa, ex: .barra-rodape 
     gap: 10px;
     font-size: 18px;
     font-weight: 700;
-    color: var(--amarelo, #FDFAB5);
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .rodape-rede:hover {
-    color: white;
+    color: var(--rosa);
 }
 
 /* Texto "WhatsApp" / "Instagram" cresce ao passar o mouse */

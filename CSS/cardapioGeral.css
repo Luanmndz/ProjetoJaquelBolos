@@ -7,7 +7,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #d29f7f;
+  background-color:white;
 }
  
 .produtos > a:first-child {
@@ -17,7 +17,7 @@
 }
  
 .produto-item {
-  background-color:var(--amarelo); /* Fundo inteiro do card*/
+  background-color:brown; /* Fundo inteiro do card*/
   border-radius: 20px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);

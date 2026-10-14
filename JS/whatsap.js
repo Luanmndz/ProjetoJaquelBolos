@@ -26,7 +26,7 @@ function envioParaZap() {
         }
         else {
             mensagem += `*As personalizações foram:* \n
-                ${item.produtoFormatado}
+                ${produtoFormatado}
             `
         }
     });

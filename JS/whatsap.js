@@ -21,6 +21,14 @@ function envioParaZap() {
         mensagem += `Nome: *${item.nome}*\n`
         mensagem += `Qtd. *${item.quantidade}x*\n`
         mensagem += `Preço. *R$${item.preco.toFixed(2)}*\n\n`
+        if(!produtoFormatado){
+            mensagem += ` `
+        }
+        else {
+            mensagem += `*As personalizações foram:* \n
+                ${item.produtoFormatado}
+            `
+        }
     });
 
     mensagem += `*Valor total do Pedido:* ${valorTotalZap.toFixed(2)}\n\n`;

@@ -72,6 +72,7 @@ if (pedidoForms) {
         };
 
         carrinho.push(produtoFormatado);
+        
 
         atualizarCarrinho();
         salvarDados();

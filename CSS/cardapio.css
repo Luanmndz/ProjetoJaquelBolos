@@ -1,217 +1,3 @@
-/* 1. PARTE DO CARROSEL
-.carousel {
-    margin: 100px auto;
-    width: 60%;
-    border: 5px transparent;
-    display: flex;
-    overflow-x: auto;
-    border-radius: 50px;
-}
-
-.group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    animation: spin 15s infinite linear;
-    padding-right: 1em;
-}
-
-.card {
-    flex: 0 0 250px;
-    height: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 0;
-}
-
-.foto-carrosel {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 15px;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-@keyframes spin {
-    from { translate: 0; }
-    to { translate: -100%; }
-}
-
-h2 {
-    font-family: 'Lobster Two', sans-serif;
-    color: var(--marrom-escuro);
-    text-align: center;
-    font-size: 60px;
-    margin: 0;
-    cursor: pointer; 
-}
-h2:hover{
-    color: var(--rosa);
-
-}
-
-.text-cardapio {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin: 0px;
-    /* background-color: #c8a59f;  
-    position: relative; 
-    z-index: 2; 
-}
-
-/* Transição "espumada" para CIMA
-.text-cardapio::before {
-    content: "";
-    position: absolute;
-    top: -79px; 
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to top, #2E1713 0%, rgba(46, 23, 19, 0) 100%);
-    pointer-events: none; 
-} */
-
-/* Transição "espumada" para BAIXO
-.text-cardapio::after {
-    content: "";
-    position: absolute;
-    bottom: -79px;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to bottom, #2E1713 0%, rgba(46, 23, 19, 0) 100%);
-    pointer-events: none;
-} 
-
-.card-bolo {
-    width: 300px;
-    border-radius: 20px; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
-    background-color:var(--amarelo) !important; 
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 25px;
-     /* border: 2px solid #2E1713;  
-}
-
-/* Ajuste das imagens dos bolos 
-.card-bolo img {
-    width: 60%;
-    height: 300px;
-    object-fit: contain; 
-    /* background-color: #F5EADD !important;  
-    border-radius: 20px 20px 0 0; 
-    display: block;
-}
-
-/* Título interno do bolo 
-.card-bolo h3 {
-    font-family: 'Lobster Two', sans-serif; 
-    color: var(--marrom-claro);
-    font-size: 26px;
-    margin: 20px 0 10px 0;
-}
-
-/* Frase descritiva 
-.frase-bolo {
-    font-family: sans-serif;
-    color:var(--marrom-escuro);
-    font-size: 14px;
-    line-height: 1.4;
-    padding: 0 20px;
-    margin-bottom: 20px;
-    min-height: 45px;
-}
-
-/* Link e Botão 
-.link-card {
-    text-decoration: none;
-    width: 80%;
-}
-
-.card-bolo button {
-    width: 100%;
-    background-color: var(--marrom-claro); 
-    color: white;
-    border: none;
-    padding: 12px 0;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 25px; 
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.card-bolo button:hover {
-    background-color:var(--rosa); 
-    transform: scale(1.03);
-}
-/* 
-#Cardapio {
-    position: relative;
-    width: 100%;
-    background-image: url('../IMAGENS/FUNDO/jaquel.jpg');
-    background-repeat: no-repeat;      
-    background-position: center;       
-    background-size: cover; 
-    background-color: #2E1713;
-} 
-
-.caixa-principal {
-    display: flex;
-    justify-content: center;
-    gap: 50px; 
-    width: 100%;
-    padding-top: 80px;
-    padding-bottom: 120px;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 1;
-}
-
-.card {
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
-.card-bolo {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-
-.card-bolo:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
-    z-index: 10; 
-}
- dos bolos 
-.img-bolo-card {
-    width: 150px !important;    
-    height: 150px !important;   
-    object-fit: contain; 
-    display: block;
-    margin: 30px auto 10px;    
-    background-color: transparent !important;
-}
-
-/* TESTE 
-
-html {
-    scroll-behavior: smooth; /* Faz a subida ser lenta e nativa pelo CSS } */
-
-/* =========================================================
-   1. CARROSSEL
-   ========================================================= */
 .carousel {
     margin: 100px auto;
     width: 60%;
@@ -271,7 +57,7 @@ h2 {
 }
 
 h2:hover {
-    color: var(--rosa);
+    color: rgb(253, 252, 170);
 }
 
 #Cardapio {
@@ -291,7 +77,7 @@ h2:hover {
 
 /* Título "Cardápio": amarelo, com uma fileira de confeitos embaixo */
 .text-cardapio h2 {
-    color: var(--amarelo);
+    color: #e4d0b4;
     transition: color 0.3s ease;
 }
 
@@ -342,10 +128,9 @@ h2:hover {
 .card-bolo {
     width: 100%;
     box-sizing: border-box;
-    border-radius: 20px;
-    border-top: 6px solid var(--rosa);
+    border-top: 6px solid  rgb(253, 252, 170);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    background-color: var(--amarelo) !important;
+    background-color: white!important;
     /* confeitos no topo do card */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 70'%3E%3Crect x='20' y='14' width='10' height='3' rx='1.5' fill='%23F27C9C' transform='rotate(30 25 15.5)'/%3E%3Crect x='70' y='34' width='10' height='3' rx='1.5' fill='%235BB5E0' transform='rotate(-50 75 35.5)'/%3E%3Crect x='120' y='12' width='10' height='3' rx='1.5' fill='%23FF9F43' transform='rotate(70 125 13.5)'/%3E%3Crect x='175' y='40' width='10' height='3' rx='1.5' fill='%239B7FE0' transform='rotate(-20 180 41.5)'/%3E%3Crect x='225' y='16' width='10' height='3' rx='1.5' fill='%237CC47F' transform='rotate(45 230 17.5)'/%3E%3Crect x='265' y='38' width='10' height='3' rx='1.5' fill='%23F27C9C' transform='rotate(-65 270 39.5)'/%3E%3Crect x='150' y='58' width='10' height='3' rx='1.5' fill='%235BB5E0' transform='rotate(15 155 59.5)'/%3E%3Crect x='35' y='52' width='10' height='3' rx='1.5' fill='%237CC47F' transform='rotate(-35 40 53.5)'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -383,16 +168,6 @@ h2:hover {
     margin: 20px 0 10px 0;
 }
 
-.card-bolo h3::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 4px;
-    border-radius: 4px;
-    background-color: var(--rosa);
-    margin: 8px auto 0;
-}
-
 .frase-bolo {
     font-family: sans-serif;
     color: var(--marrom-escuro);
@@ -425,8 +200,9 @@ h2:hover {
 }
 
 .card-bolo button:hover {
-    background-color: var(--rosa);
+    background-color: rgb(253, 252, 170);
     transform: scale(1.03);
+    color: var(--marrom-escuro);
 }
 
 

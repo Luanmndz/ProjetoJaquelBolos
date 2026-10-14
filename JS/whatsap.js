@@ -13,6 +13,7 @@ function envioParaZap() {
     mensagem += `*Itens do pedido:*\n\n`
 
     let valorTotalZap = 0;
+    let produtoForms = `As personalizações do cliente foram: ${JSON.stringify(produtoFormatado)}`
 
     carrinho.forEach((item) => {
         let subtotalZap = item.preco * item.quantidade;
@@ -21,15 +22,12 @@ function envioParaZap() {
         mensagem += `Nome: *${item.nome}*\n`
         mensagem += `Qtd. *${item.quantidade}x*\n`
         mensagem += `Preço. *R$${item.preco.toFixed(2)}*\n\n`
-        if(!produtoFormatado){
-            mensagem += ` `
+        if (!produtoForms){
+            mensagem += ``
         }
         else {
-            mensagem += `*As personalizações foram:* \n
-                ${produtoFormatado}
-            `
+            mensagem += produtoForms
         }
-    });
 
     mensagem += `*Valor total do Pedido:* ${valorTotalZap.toFixed(2)}\n\n`;
 
@@ -38,6 +36,7 @@ function envioParaZap() {
     let whatsap = `https://wa.me/${numero}?text=${mensagemfinal}`;
     window.open(whatsap, "_blank");
     
+})
 }
 
 document.querySelector(".btnFinalizar").addEventListener("click", envioParaZap);

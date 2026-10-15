@@ -36,24 +36,64 @@
                 <a class="link-navbar" href="#Cardapio">CARDÁPIO</a>
                 <a class="link-navbar" href="HTML/Historia.html">HISTORIA</a>
             </div>
+             <section class="container-carrinho">
+
+        <button id="btn-carrinho" class="btn-carrinho">
+            <i class="bi bi-bag-fill"></i>
+            <span id="contador-carrinho" class="contador-carrinho">0</span>
+        </button>
+
+        <div id="pop-up" class="pop-up">
+            <h3> Carrinho </h3>
+            <div class="itens-carrinho">
+
+            </div>
+            <div class="valorTotal">
+
+            </div>
+            <div class="pop-up-inferior">
+                <button class="btnFinalizar"></button>
+            </div>
+        </div>
+    </section>
         </nav>
     </header>
 
 
     <!--  ESTRUTURA HOME-->
     <section id="Home" class="hero-confeitaria">
-        <div class="hero-conteudo">
-            <h1>Bem-vindo à Jaquel Bolos</h1>
-            <p class="subtitulo-principal">Sabores Artesanais em Cada Fatia</p>
-            <p class="texto-artesanal">
-                Cada bolo é preparado artesanalmente com paciência, ingredientes selecionados e muito afeto.
-                Acreditamos que uma receita feita com carinho tem o poder único de
-                <span class="destaque-amarelo">transformar encontros simples em memórias inesquecíveis</span>
-                e trazer o abraço quentinho da comida de verdade para a sua mesa.
-            </p>
+         <div class="hero-conteudo">
+        <span class="hero-selo">Confeitaria Artesanal</span>
+        <h1>Bolos artesanais criados para celebrar o melhor da vida.</h1>
+        <p class="texto-artesanal">
+            Bolos Redondos, Mini Bolos, Bolos Quadrados e Bolos Decorados feitos com muito amor e carinho!
+        </p>
+        <div class="hero-botoes">
+            <a href="#Cardapio" class="hero-btn hero-btn-principal">Ver cardápio</a>
+            <a href="#Historia" class="hero-btn hero-btn-secundario">Nossa História</a>
         </div>
+    </div>
+           
+   
+</section>
 
-    </section>
+<!-- <section class="destaques">
+    <div class="destaque">
+        <i class="bi bi-cake2"></i>
+        <h3>Bolos Decorados</h3>
+        <p>Temas personalizados para cada celebração.</p>
+    </div>
+    <div class="destaque">
+        <i class="bi bi-heart"></i>
+        <h3>Feito à Mão</h3>
+        <p>Receitas artesanais, feitas com paciência.</p>
+    </div>
+    <div class="destaque">
+        <i class="bi bi-stars"></i>
+        <h3>Ingredientes Selecionados</h3>
+        <p>Qualidade em cada massa e recheio.</p>
+    </div>
+</section> -->
 
 
     <!-- ESTRUTURA CARDAPIO -->
@@ -140,26 +180,7 @@
 
         <button id="btnSubir" onclick="subirSuave()">▲</button>
 
-         <section class="container-carrinho">
-
-        <button id="btn-carrinho" class="btn-carrinho">
-            <i class="bi bi-bag-fill"></i>
-            <span id="contador-carrinho" class="contador-carrinho">0</span>
-        </button>
-
-        <div id="pop-up" class="pop-up">
-            <h3> Carrinho </h3>
-            <div class="itens-carrinho">
-
-            </div>
-            <div class="valorTotal">
-
-            </div>
-            <div class="pop-up-inferior">
-                <button class="btnFinalizar"></button>
-            </div>
-        </div>
-    </section>
+        
     </footer>
     <script src="JS/carrinho.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

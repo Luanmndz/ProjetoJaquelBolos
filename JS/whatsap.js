@@ -15,13 +15,24 @@ function envioParaZap() {
     let valorTotalZap = 0;
 
     carrinho.forEach((item) => {
-        let subtotalZap = item.preco * item.quantidade;
-        valorTotalZap += subtotalZap;
+    let subtotalZap = item.preco * item.quantidade;
+    valorTotalZap += subtotalZap;
 
-        mensagem += `Nome: *${item.nome}*\n`
-        mensagem += `Qtd. *${item.quantidade}x*\n`
-        mensagem += `Preço. *R$${item.preco.toFixed(2)}*\n\n`
-    });
+    mensagem += `Nome: *${item.nome}*\n`;
+    
+    if (item.massa) {
+        mensagem += `Massa: ${item.massa}\n`;
+    }
+    if (item.kg) {
+        mensagem += `Tamanho: ${item.kg}\n`;
+    }
+    if (item.recheio) {
+        mensagem += `Recheio: ${item.recheio}\n`;
+    }
+
+    mensagem += `Qtd. *${item.quantidade}*\n`;
+    mensagem += `Preço: R$ ${item.preco.toFixed(2)}\n\n`;
+});
 
     mensagem += `*Valor total do Pedido:* ${valorTotalZap.toFixed(2)}\n\n`;
 

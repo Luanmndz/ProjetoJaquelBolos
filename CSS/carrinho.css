@@ -1,9 +1,7 @@
-.container-carrinho 
-{
-    position: fixed;
-    top: 40px; 
-    right: 15px; 
-    z-index: 1000; 
+.container-carrinho {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .container-carrinho h3 
@@ -62,11 +60,15 @@
     overflow-y: auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     color: var(--fundo);
+    z-index: 1005;
+
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .pop-up.ativo 
 {
-    display: block;
+    display: flex;
     animation: fadeInSlide 0.3s ease-out forwards;
 }
 
@@ -90,6 +92,7 @@
     margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 2px solid var(--rosa);
+    
 }
 
 
@@ -129,7 +132,12 @@
     mix-blend-mode: multiply;
 }
 
-
+.itens-carrinho {
+    overflow-y: auto; /* Adiciona a barra de rolagem apenas aqui */
+    /* max-height: 280px; Altura máxima da lista antes de começar a rolar */
+    padding-right: 5px; /* Espaço para a barra de rolagem não colar nos itens */
+    /* flex-grow: 1; Ocupa o espaço disponível */
+}
 .info-item 
 {
     flex: 1;
@@ -195,12 +203,14 @@
     margin-top: 15px;
     padding-top: 10px;
     border-top: 1px dashed var(--marrom-claro);
+    flex-shrink: 0;
 }
 
 .pop-up-inferior {
     display: flex;
     justify-content: center;
     margin-top: 12px;
+    flex-shrink: 0;
 }
 
 
@@ -227,10 +237,10 @@
     box-shadow: 0 6px 14px rgba(242, 124, 156, 0.45);
 }
 
+
 @media (max-width: 768px) {
     .pop-up {
-        width: calc(100vw - 30px);
-        right: -10px;
+        width: calc(100vw - 40px);
         max-height: 420px;
         padding: 15px;
     }

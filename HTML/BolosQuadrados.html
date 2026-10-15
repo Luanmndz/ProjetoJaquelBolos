@@ -23,31 +23,51 @@
                 <img class="imagemLogo" src="../IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Bolos">
             </a>
 
-            <button class="menu-hamburguer" aria-label="Abrir Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-direita">
+
+                <div class="menu-links">
+                    <a class="link-navbar" href="#Cardapio">CARDÁPIO</a>
+                    <a class="link-navbar" href="HTML/Historia.html">HISTÓRIA</a>
+                </div>
+
+                <button class="menu-hamburguer" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <section class="container-carrinho">
+                    <button id="btn-carrinho" class="btn-carrinho">
+                        <i class="bi bi-bag-fill"></i>
+                        <span id="contador-carrinho" class="contador-carrinho">0</span>
+                    </button>
+
+                    <div id="pop-up" class="pop-up">
+                        <h3> Carrinho </h3>
+                        <div class="itens-carrinho"></div>
+                        <div class="valorTotal"></div>
+                        <div class="pop-up-inferior">
+                            <button class="btnFinalizar"></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
 
         </nav>
-    </header>
 
+    </header>
     <section class="produtos">
 
-        <!-- LINK DE VOLTAR -->
-        <a href="../index.html">Voltar</a>
+        <a href="../index.html" class="btnVoltar">VOLTAR <i class="bi bi-arrow-left-circle-fill"></i></a>
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado1.jpg"
                     alt="Bolos Quadrados, Bolo Patrulha Canina">
             </div>
             <span> Patrulha Canina </span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="13" data-tipo="Quadrados" data-nome="Bolo da Patrulha Canina"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado1.jpg">Adicionar ao
-                carrinho</button>
+            
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
@@ -56,16 +76,14 @@
 
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+          
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/boloQuadrado2.jpg"
                     alt="Bolos Quadrados, Bolo Patrulha Canina">
             </div>
             <span>Lady Bug</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="14" data-tipo="Quadrados" data-nome="Bolo da Lady Bug"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado2.jpg">Adicionar ao
-                carrinho</button>
+            
+          
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
@@ -74,16 +92,14 @@
 
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/boloQuadrado3.jpg"
                     alt="Bolos Quadrados, Bolo Patrulha Canina">
             </div>
             <span>Lírios</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="15" data-tipo="Quadrados" data-nome="Bolo de Lírios"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado3.jpg">Adicionar ao
-                carrinho</button>
+            
+           
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
@@ -92,136 +108,121 @@
 
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado4.jpg"
                     alt="Bolos Quadrados, Bolo Patrulha Canina">
             </div>
             <span>Homem Aranha</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="16" data-tipo="Quadrados" data-nome="Bolo do Homem-Aranha"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado4.jpg">Adicionar ao
-                carrinho</button>
+           
+           
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado5.jpg"
                     alt="Bolos Quadrados, Bolo My Little Poney">
             </div>
             <span>My Little Poney</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="17" data-tipo="Decorados" data-nome="Bolo da My Little Poney"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado5.jpg">Adicionar ao
-                carrinho</button>
+           
+           
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado6.jpg" alt="Bolos Quadrados, Bolo Floral">
             </div>
             <span>Floral</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="18" data-tipo="Decorados" data-nome="Bolo Floral"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado6.jpg">Adicionar ao
-                carrinho</button>
+            
+           
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado7.jpg"
                     alt="Bolos Quadrados, Bolo Rosas Casamento">
             </div>
             <span>Rosas Casamento</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="19" data-tipo="Quadrados" data-nome="Bolo de Rosas Casamento"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado7.jpg">Adicionar ao
-                carrinho</button>
+            
+           
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado8.jpg"
                     alt="Bolos Quadrados, Bolo Homem-Aranha Infantil">
             </div>
             <span>Homem Aranha Infantil</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="20" data-tipo="Quadrados" data-nome="Bolo do Homem-Aranha Infantil"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado8.jpg">Adicionar ao
-                carrinho</button>
+            
+            
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado9.jpg" alt="Bolos Quadrados, Bolo Borboletas">
             </div>
             <span>Borboletas</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="21" data-tipo="Quadrados" data-nome="Bolo de Borboletas"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado9.jpg">Adicionar ao
-                carrinho</button>
+            
+            
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4> Quadrados </h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado10.jpg" alt="Bolos Quadrados, Bolo Lilás">
             </div>
             <span>Lilás</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="22" data-tipo="Quadrados" data-nome="Bolo Lilás" data-preco="R$ 90,00"
-                data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado10.jpg">Adicionar ao carrinho</button>
+           
+           
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Stitch</h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado11.jpg" alt="Bolos Quadrados, Bolo Stitch">
             </div>
             <span>Stitch</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="23" data-tipo="Quadrados" data-nome="Bolo do Stitch"
-                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado11.jpg">Adicionar ao
-                carrinho</button>
+           
+           
             <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
                 Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Marsha e o Urso</h4>
+            
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado12.jpg"
                     alt="Bolos Quadrados, Bolo Marsha e o Urso">
             </div>
             <span>Marsha e o Urso</span>
-            <span>A partir de R$90,00</span>
+          
             <button class="btnAdicionar" data-id="24" data-tipo="Quadrados" data-nome="Bolo da Marsha Urso"
                 data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosQuadrados/BoloQuadrado12.jpg">Adicionar ao
                 carrinho</button>
@@ -232,26 +233,6 @@
 
     </section>
 
-    <section class="container-carrinho">
-
-        <button id="btn-carrinho" class="btn-carrinho">
-            <i class="bi bi-bag-fill"></i>
-            <span id="contador-carrinho" class="contador-carrinho">0</span>
-        </button>
-
-        <div id="pop-up" class="pop-up">
-            <h3> Carrinho </h3>
-            <div class="itens-carrinho">
-
-            </div>
-            <div class="valorTotal">
-
-            </div>
-            <div class="pop-up-inferior">
-                <button class="btnFinalizar"></button>
-            </div>
-        </div>
-    </section>
 
     <div class="pop-forms" id="pop-forms">
         <div class="form-conteudo">

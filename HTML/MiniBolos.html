@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/nav.css">
     <link rel="stylesheet" href="../CSS/cardapioGeral.css">
     <link rel="stylesheet" href="../CSS/carrinho.css">
@@ -15,194 +15,234 @@
 
     <title> Jaquel Bolos | Mini Bolos </title>
 </head>
- 
+
 <body>
-<header class="cabecalho">
-    <nav class="navbar">
-   
-        <a class="link-logo" href="../index.html"> 
-            <img class="imagemLogo" src="../IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Bolos">
-        </a>
+    <header class="cabecalho">
+        <nav class="navbar">
 
-        <button class="menu-hamburguer" aria-label="Abrir Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <a class="link-logo" href="../index.html">
+                <img class="imagemLogo" src="../IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Bolos">
+            </a>
 
-    </nav>
-</header>
+            <div class="nav-direita">
+
+                <div class="menu-links">
+                    <a class="link-navbar" href="#Cardapio">CARDÁPIO</a>
+                    <a class="link-navbar" href="HTML/Historia.html">HISTÓRIA</a>
+                </div>
+
+                <button class="menu-hamburguer" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <section class="container-carrinho">
+                    <button id="btn-carrinho" class="btn-carrinho">
+                        <i class="bi bi-bag-fill"></i>
+                        <span id="contador-carrinho" class="contador-carrinho">0</span>
+                    </button>
+
+                    <div id="pop-up" class="pop-up">
+                        <h3> Carrinho </h3>
+                        <div class="itens-carrinho"></div>
+                        <div class="valorTotal"></div>
+                        <div class="pop-up-inferior">
+                            <button class="btnFinalizar"></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+        </nav>
+
+    </header>
     <section class="produtos">
-       
-        <!-- LINK DE VOLTAR -->
-        <a href="../index.html">Voltar</a>
- 
-        <!-- MINI BOLO 1 -->
-        <div class="produto-item" data-detalhes="Massa: Baunilha Fofinha&#10;Recheio: Ninho com Morango">
-            <h4>Mini Bolos</h4>
+
+        <a href="../index.html" class="btnVoltar">VOLTAR <i class="bi bi-arrow-left-circle-fill"></i></a>
+
+
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo1.jpg" alt="Mini Bolo Ninho com morango">
+            </div>
             <span>Ninho com morango</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="37" data-tipo="Mini Bolos" data-nome="Mini bolo de Ninho com Morango" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo1.jpg">Adicionar ao carrinho</button>
+            <button class="btnAdicionar" data-id="37" data-tipo="Mini Bolos" data-nome="Mini bolo de Ninho com Morango"
+                data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo1.jpg">Adicionar ao carrinho</button>
         </div>
- 
-        <!-- MINI BOLO 2 -->
-        <div class="produto-item" data-detalhes="Massa: Chocolate Intenso&#10;Recheio: Chocolate com Morango">
-            <h4>Mini Bolos</h4>
+
+
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo2.jpg" alt="Mini Bolo Chocolate com morango">
+            </div>
+
             <span>Chocolate com morango</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="38" data-tipo="Mini Bolos" data-nome="Mini bolo de Chocolate com Morango" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo2.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="38" data-tipo="Mini Bolos"
+                data-nome="Mini bolo de Chocolate com Morango" data-preco="16.00"
+                data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo2.jpg">Adicionar ao carrinho</button>
         </div>
- 
-        <!-- MINI BOLO 3 -->
-        <div class="produto-item" data-detalhes="Massa: Cenoura Fofinha&#10;Recheio: Chocolate Cremoso">
-            <h4>Mini Bolos</h4>
+
+
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo3.jpg" alt="Mini Bolo Cenoura com chocolate">
+            </div>
             <span>Cenoura com chocolate</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="39" data-tipo="Mini Bolos" data-nome="Mini bolo de Cenoura com Chocolate" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo3.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="39" data-tipo="Mini Bolos"
+                data-nome="Mini bolo de Cenoura com Chocolate" data-preco="16.00"
+                data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo3.jpg">Adicionar ao carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 4 -->
-        <div class="produto-item" data-detalhes="Massa: Baunilha&#10;Recheio: Ninho Cremoso">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo4.jpg" alt="Mini Bolo Ninho">
+            </div>
             <span>Ninho</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="40" data-tipo="Mini Bolos" data-nome="Ninho" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo4.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="40" data-tipo="Mini Bolos" data-nome="Ninho" data-preco="16.00"
+                data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo4.jpg">Adicionar ao carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 5 -->
-        <div class="produto-item" data-detalhes="Massa: Três Camadas (Baunilha, Chocolate e Morango)&#10;Recheio: Napolitano Especial">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo5.jpg" alt="Mini Bolo Napolitano">
+            </div>
             <span>Napolitano</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="41" data-tipo="Mini Bolos" data-nome="Mini bolo Napolitano" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo5.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="41" data-tipo="Mini Bolos" data-nome="Mini bolo Napolitano"
+                data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo5.jpg">Adicionar ao carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 6 -->
-        <div class="produto-item" data-detalhes="Massa: Mesclada&#10;Recheio: Dois Amores">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo6.jpg" alt="Mini Bolo Casadinho">
+            </div>
             <span>Casadinho</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="42" data-tipo="Mini Bolos" data-nome="Mini bolo Casadinho" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo6.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="42" data-tipo="Mini Bolos" data-nome="Mini bolo Casadinho"
+                data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo6.jpg">Adicionar ao carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 7 -->
-        <div class="produto-item" data-detalhes="Massa: Cenoura Caseira&#10;Recheio: Tradicional da Casa">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo7.jpg" alt="Mini Bolo Cenoura">
+            </div>
             <span>Cenoura</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="43" data-tipo="Mini Bolos" data-nome="Mini bolo de Cenoura" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo7.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="43" data-tipo="Mini Bolos" data-nome="Mini bolo de Cenoura"
+                data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo7.jpg">Adicionar ao carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 8 -->
-        <div class="produto-item" data-detalhes="Massa: Casadinho&#10;Recheio: Morango com Brigadeiro">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo8.jpg" alt="Mini Bolo Morango casadinho">
+            </div>
             <span>Morango casadinho</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="44" data-tipo="Mini Bolos" data-nome="Mini bolo de Morango Casadinho" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo8.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="44" data-tipo="Mini Bolos" data-nome="Mini bolo de Morango Casadinho"
+                data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo8.jpg">Adicionar ao carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 9 -->
-        <div class="produto-item" data-detalhes="Massa: Cenoura&#10;Recheio: Chocolate com Morango">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo9.jpg" alt="Mini Bolo Cenoura com chocolate">
+            </div>
             <span>Cenoura com chocolate</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="45" data-tipo="Mini Bolos" data-nome="Mini bolo de Cenoura com Chocolate" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo9.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="45" data-tipo="Mini Bolos"
+                data-nome="Mini bolo de Cenoura com Chocolate" data-preco="16.00"
+                data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo9.jpg">Adicionar ao carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 10 -->
-        <div class="produto-item" data-detalhes="Massa: Baunilha Suave&#10;Recheio: Mousse de Limão Cremoso">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo10.jpg" alt="Mini Bolo Limão">
+            </div>
             <span>Limão</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="46" data-tipo="Mini Bolos" data-nome="Mini bolo de Limão" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo10.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="46" data-tipo="Mini Bolos" data-nome="Mini bolo de Limão"
+                data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo10.jpg">Adicionar ao
+                carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 11 -->
-        <div class="produto-item" data-detalhes="Massa: Chocolate&#10;Recheio: Brigadeiro Trufado">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo11.jpg" alt="Mini Bolo Chocolate">
+            </div>
             <span>Chocolate</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="47" data-tipo="Mini Bolos" data-nome="Mini bolo de Chocolate" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo11.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="47" data-tipo="Mini Bolos" data-nome="Mini bolo de Chocolate"
+                data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo11.jpg">Adicionar ao
+                carrinho</button>
         </div>
- 
+
         <!-- MINI BOLO 12 -->
-        <div class="produto-item" data-detalhes="Massa: Baunilha&#10;Recheio: Ninho com Morangos Frescos">
-            <h4>Mini Bolos</h4>
+        <div class="produto-item">
+            <div class="caixa-personalizavel">
             <img src="../IMAGENS/PRODUTOS/MiniBolos/miniBolo12.jpg" alt="Mini Bolo Ninho com Morangos">
+            </div>
             <span>Ninho com Morangos</span>
-            <span>A partir de R$16,00</span>
-            <button class="btnAdicionar" data-id="48" data-tipo="Mini Bolos" data-nome="Mini bolo de Ninho com Morango" data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo12.jpg">Adicionar ao carrinho</button>
+
+            <button class="btnAdicionar" data-id="48" data-tipo="Mini Bolos" data-nome="Mini bolo de Ninho com Morango"
+                data-preco="16.00" data-img="../IMAGENS/PRODUTOS/MiniBolos/miniBolo12.jpg">Adicionar ao
+                carrinho</button>
         </div>
- 
+
     </section>
- 
-    <section class="container-carrinho">
-        <button id="btn-carrinho" class="btn-carrinho">
-            <i class="bi bi-bag-fill"></i>
-            <span id="contador-carrinho" class="contador-carrinho">0</span>
-        </button>
- 
-        <div id="pop-up" class="pop-up">
-            <h3>Carrinho</h3>
-            <div class="itens-carrinho"></div>
-            <div class="valorTotal"></div>
-            <div class="pop-up-inferior">
-                <button class="btnFinalizar"></button>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+
+            <a class="rodape-logo" href="#Home">
+                <img src="../IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Jaquel Bolos">
+            </a>
+
+            <div class="rodape-local">
+                <svg class="icone-sp" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor"
+                        d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+                </svg>
+                <span>São Paulo - SP</span>
+            </div>
+
+            <div class="rodape-redes">
+                <a class="rodape-rede" href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+                    <span class="rodape-rede-icone">
+                        <img src="../IMAGENS/ICONES/whatsapp.png" alt="">
+                    </span>
+                    <span>WhatsApp</span>
+                </a>
+
+                <a class="rodape-rede" href="https://instagram.com/seuusuario" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="rodape-rede-icone">
+                        <img src="../IMAGENS/ICONES/instagram.png" alt="">
+                    </span>
+                    <span>Instagram</span>
+                </a>
             </div>
         </div>
-    </section>
- 
- <footer class="rodape">
-    <div class="rodape-conteudo">
 
-        <a class="rodape-logo" href="#Home">
-            <img src="../IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Jaquel Bolos">
-        </a>
-
-        <div class="rodape-local">
-            <svg class="icone-sp" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
-            </svg>
-            <span>São Paulo - SP</span>
+        <div class="rodape-direitos">
+            <p>© 2026 Jaquel Bolos. Todos os direitos reservados. As imagens e o conteúdo deste site são protegidos por
+                direitos autorais, e a reprodução sem autorização é proibida.</p>
         </div>
+    </footer>
 
-        <div class="rodape-redes">
-            <a class="rodape-rede" href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
-                <span class="rodape-rede-icone">
-                    <img src="../IMAGENS/ICONES/whatsapp.png" alt="">
-                </span>
-                <span>WhatsApp</span>
-            </a>
-
-            <a class="rodape-rede" href="https://instagram.com/seuusuario" target="_blank" rel="noopener noreferrer">
-                <span class="rodape-rede-icone">
-                    <img src="../IMAGENS/ICONES/instagram.png" alt="">
-                </span>
-                <span>Instagram</span>
-            </a>
-        </div>
-    </div>
-
-    <div class="rodape-direitos">
-        <p>© 2026 Jaquel Bolos. Todos os direitos reservados. As imagens e o conteúdo deste site são protegidos por direitos autorais, e a reprodução sem autorização é proibida.</p>
-    </div>
-</footer>
- 
-     <script src="../JS/carrinho.js"></script>
+    <script src="../JS/carrinho.js"></script>
     <script src="../JS/whatsap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
- 
+
 </html>
- 

@@ -23,172 +23,193 @@
                 <img class="imagemLogo" src="../IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Bolos">
             </a>
 
-            <button class="menu-hamburguer" aria-label="Abrir Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-direita">
+
+                <div class="menu-links">
+                    <a class="link-navbar" href="#Cardapio">CARDÁPIO</a>
+                    <a class="link-navbar" href="HTML/Historia.html">HISTÓRIA</a>
+                </div>
+
+                <button class="menu-hamburguer" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <section class="container-carrinho">
+                    <button id="btn-carrinho" class="btn-carrinho">
+                        <i class="bi bi-bag-fill"></i>
+                        <span id="contador-carrinho" class="contador-carrinho">0</span>
+                    </button>
+
+                    <div id="pop-up" class="pop-up">
+                        <h3> Carrinho </h3>
+                        <div class="itens-carrinho"></div>
+                        <div class="valorTotal"></div>
+                        <div class="pop-up-inferior">
+                            <button class="btnFinalizar"></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
 
         </nav>
+
     </header>
+
+    
 
     <section class="produtos">
 
-        <a href="../index.html">Voltar</a>
-
-        <div class="produto-item">
+        <a href="../index.html" class="btnVoltar">VOLTAR <i class="bi bi-arrow-left-circle-fill"></i></a>
         
+        <div class="produto-item">
+
             <div class="caixa-personalizavel">
-                <img src="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado1.jpg" alt="Bolos Decorados, Bolo Homem Aranha">
+                <img src="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado1.jpg"
+                    alt="Bolos Decorados, Bolo Homem Aranha">
             </div>
             <span>Homem Aranha</span>
-            <!-- <span>A partir de R$90,00</span> -->
-            <!-- <button class="btnAdicionar" data-id="1" data-tipo="Decorados" data-nome="Bolo do Homem-Aranha" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado1.jpg">Adicionar ao carrinho</button> -->
-            <button class="btnPersonalizar" data-id="1" data-tipo="Decorados" data-nome="Bolo do Homem-Aranha" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado1.jpg">Personalizar Pedido</button>
+            <button class="btnPersonalizar" data-id="1" data-tipo="Decorados" data-nome="Bolo do Homem-Aranha"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado1.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-        <h4>Decorados</h4>
             <div class="caixa-personalizavel">
-                <img src="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado2.jpg" alt="Bolos Decorados, Bolo de Decoração Simples"> 
+                <img src="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado2.jpg"
+                    alt="Bolos Decorados, Bolo de Decoração Simples">
             </div>
             <span>Decoração simples</span>
-        <span>A partir de R$90,00</span>
-        <button class="btnAdicionar" data-id="2" data-tipo="Decorados" data-nome="Bolo Simples" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado2.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="2" data-tipo="Decorados" data-nome="Bolo Simples" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado2.jpg">Personalizar Pedido</button>
+
+            <button class="btnPersonalizar" data-id="2" data-tipo="Decorados" data-nome="Bolo Simples"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado2.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado3.jpg" alt="Bolos Decorados, Bolo Dinossauros">
             </div>
-            <span>Dinosssauros</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="3" data-tipo="Decorados" data-nome="Bolo de Dinossauros" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado3.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="3" data-tipo="Decorados" data-nome="Bolo de Dinossauros" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado3.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">Dinosssauros</span>
+            <button class="btnPersonalizar" data-id="3" data-tipo="Decorados" data-nome="Bolo de Dinossauros"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado3.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado4.jpg" alt="Bolos Decorados, Bluey">
             </div>
-            <span>Bluey</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="4" data-tipo="Decorados" data-nome="Bolo do Bluey" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado4.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="4" data-tipo="Decorados" data-nome="Bolo do Bluey" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado4.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">Bluey</span>
+
+
+            <button class="btnPersonalizar" data-id="4" data-tipo="Decorados" data-nome="Bolo do Bluey"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado4.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
-                <img src="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado5.jpg" alt="Bolos Decorados, Bolo My Little Poney">
+                <img src="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado5.jpg"
+                    alt="Bolos Decorados, Bolo My Little Poney">
             </div>
-            <span>My Little Poney</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="5" data-tipo="Decorados" data-nome="Bolo da My Little Poney" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado5.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="5" data-tipo="Decorados" data-nome="Bolo da My Little Poney" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado5.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">My Little Poney</span>
+
+            <button class="btnPersonalizar" data-id="5" data-tipo="Decorados" data-nome="Bolo da My Little Poney"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado5.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
-                <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado6.jpg" alt="Bolos Decorados, Bolo Looney Tunes">
+                <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado6.jpg"
+                    alt="Bolos Decorados, Bolo Looney Tunes">
             </div>
-            <span>Looney Tunes</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="6" data-tipo="Decorados" data-nome="Bolo dos Looney Tunes" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado6.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="6" data-tipo="Decorados" data-nome="Bolo dos Looney Tunes" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado6.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">Looney Tunes</span>
+
+            <button class="btnPersonalizar" data-id="6" data-tipo="Decorados" data-nome="Bolo dos Looney Tunes"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado6.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado7.jpg" alt="Temático de Aniversário">
             </div>
-            <span>Temático de aniversario</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="7" data-tipo="Decorados" data-nome="Bolo Temático Aniversário" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado7.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="7" data-tipo="Decorados" data-nome="Bolo Temático Aniversário" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado7.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">Temático de aniversario</span>
+
+            <button class="btnPersonalizar" data-id="7" data-tipo="Decorados" data-nome="Bolo Temático Aniversário"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado7.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado8.jpg" alt="Bolos Decorados, Bolo Magali">
             </div>
-            <span> Magali</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="8" data-tipo="Decorados" data-nome="Bolo da Magali" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado8.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="8" data-tipo="Decorados" data-nome="Bolo da Magali" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado8.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo"> Magali</span>
+
+            <button class="btnPersonalizar" data-id="8" data-tipo="Decorados" data-nome="Bolo da Magali"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado8.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado9.jpg" alt="Bolos Decorados, Bolo Marrie">
             </div>
-            <span>Marrie</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="9" data-tipo="Decorados" data-nome="Bolo da Marrie" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado9.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="9" data-tipo="Decorados" data-nome="Bolo da Marrie" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado9.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">Marrie</span>
+
+            <button class="btnPersonalizar" data-id="9" data-tipo="Decorados" data-nome="Bolo da Marrie"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado9.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorado</h4>
+
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado10.jpg" alt="Bolos Decorados, Bolo BomBom">
             </div>
-            <span>BomBom</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="10" data-tipo="Decorados" data-nome="Bolo BomBom" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado10.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="10" data-tipo="Decorados" data-nome="Bolo BomBom" data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado10.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">BomBom</span>
+
+            <button class="btnPersonalizar" data-id="10" data-tipo="Decorados" data-nome="Bolo BomBom"
+                data-preco="90.00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado10.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
                 <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado11.jpg" alt="Bolos Decorados, Bolo Garfield">
             </div>
-            <span>Garfield</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="11" data-tipo="Decorados" data-nome="Bolo do Garfield" data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado11.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="11" data-tipo="Decorados" data-nome="Bolo do Garfield" data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado11.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">Garfield</span>
+
+            <button class="btnPersonalizar" data-id="11" data-tipo="Decorados" data-nome="Bolo do Garfield"
+                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado11.jpg">Personalizar
+                Pedido</button>
         </div>
 
         <div class="produto-item">
-            <h4>Decorados</h4>
+
             <div class="caixa-personalizavel">
-                <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado12.jpg" alt="Bolos Decorados, Bolo Galinha Pintadinha">
+                <img src="../IMAGENS/PRODUTOS/BolosDecorados/boloDecorado12.jpg"
+                    alt="Bolos Decorados, Bolo Galinha Pintadinha">
             </div>
-            <span>Galinha Pintadinha</span>
-            <span>A partir de R$90,00</span>
-            <button class="btnAdicionar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha" data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Adicionar ao carrinho</button>
-            <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha" data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar Pedido</button>
+            <span class="nome-bolo">Galinha Pintadinha</span>
+
+            <button class="btnPersonalizar" data-id="12" data-tipo="Decorados" data-nome="Bolo da Galinha Pintadinha"
+                data-preco="R$ 90,00" data-img="../IMAGENS/PRODUTOS/BolosDecorados/BoloDecorado12.jpg">Personalizar
+                Pedido</button>
         </div>
 
-    </section>
-
-    <section class="container-carrinho">
-
-        <button id="btn-carrinho" class="btn-carrinho">
-            <i class="bi bi-bag-fill"></i>
-            <span id="contador-carrinho" class="contador-carrinho">0</span>
-        </button>
-
-        <div id="pop-up" class="pop-up">
-            <h3> Carrinho </h3>
-            <div class="itens-carrinho">
-
-            </div>
-            <div class="valorTotal">
-
-            </div>
-            <div class="pop-up-inferior">
-                <button class="btnFinalizar"></button>
-            </div>
-        </div>
     </section>
 
 
@@ -197,33 +218,33 @@
             <button id="fecharForms">&times;</button>
 
 
-                <form id="forms">
-                    <label for="kilos">Selecione quantos kilos deseja:</label>
-                    <select name="kilos" id="kilos">
-                        <option value="1kg">1kg</option>
-                        <option value="2kg">2kg</option>
-                        <option value="3kg">3kg</option>
-                        <option value="4kg">4kg</option>
-                        <option value="5kg">5kg</option>
-                    </select>
-                    <label for="recheios">Selecione seu Recheio:</label>
-                    <select name="recheios" id="recheios">
-                        <option value="Prestígio">Prestígio</option>
-                        <option value="Mousse de Maracujá">Mousse de Maracujá</option>
-                        <option value="Ninho">Ninho</option>
-                        <option value="Ninho com Morango">Ninho com Morango</option>
-                        <option value="Abacaxi com creme belga">Abacaxi com Creme Belga</option>
-                        <option value="Brigadeiro">Brigadeiro</option>
-                    </select>
+            <form id="forms">
+                <label for="kilos">Selecione quantos kilos deseja:</label>
+                <select name="kilos" id="kilos">
+                    <option value="1kg">1kg</option>
+                    <option value="2kg">2kg</option>
+                    <option value="3kg">3kg</option>
+                    <option value="4kg">4kg</option>
+                    <option value="5kg">5kg</option>
+                </select>
+                <label for="recheios">Selecione seu Recheio:</label>
+                <select name="recheios" id="recheios">
+                    <option value="Prestígio">Prestígio</option>
+                    <option value="Mousse de Maracujá">Mousse de Maracujá</option>
+                    <option value="Ninho">Ninho</option>
+                    <option value="Ninho com Morango">Ninho com Morango</option>
+                    <option value="Abacaxi com creme belga">Abacaxi com Creme Belga</option>
+                    <option value="Brigadeiro">Brigadeiro</option>
+                </select>
 
-                    <label for="massa">Selecione sua massa:</label>
-                    <select name="massa" id="massa">
-                        <option value="Baunilha">Baunilha</option>
-                        <option value="Chocolate">Chocolate</option>
-                    </select>
+                <label for="massa">Selecione sua massa:</label>
+                <select name="massa" id="massa">
+                    <option value="Baunilha">Baunilha</option>
+                    <option value="Chocolate">Chocolate</option>
+                </select>
 
-                    <button type="submit">ENVIAR</button>
-                </form>
+                <button type="submit">ENVIAR</button>
+            </form>
         </div>
     </div>
 

@@ -26,14 +26,17 @@ body {
     --largura-navbar: 1300px;
     --altura-onda: 40px;
 } 
+
+
+/* cssd do alert */
 .swal2-toast.meu-toast-personalizado {
     padding: 12px 20px !important;
-    font-size: 1rem !important; /* Aumenta a fonte geral */
+    font-size: 1rem !important; 
     width: auto !important;
     max-width: 450px !important;
 }
 
-/* Aumenta o texto do título */
+
 .swal2-toast.meu-toast-personalizado .swal2-title {
     font-size: 1rem !important;
     font-weight: 600 !important;

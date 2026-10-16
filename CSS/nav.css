@@ -50,17 +50,17 @@
 
 .menu-links {
     display: flex;
-    gap: 30px;
+    gap: 50px;
     align-items: center;
 }
 
 .link-navbar {
-    font-family: 'Lobster Two', sans-serif;
+    font-family: 'SnowWhite';
     font-size: 20px;
-    font-weight: 700;
     color: var(--branco);
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
+    letter-spacing: 8px;
 }
 
 .link-navbar:hover {

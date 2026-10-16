@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+@font-face {
+    font-family: 'SnowWhite';
+    src: url(../FONTES/Snowwhite.otf);
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     padding: 0;
@@ -9,7 +14,7 @@
 }
 
 body {
-    font-family: 'Montserrat', monospace;
+    font-family: "Montserrat", sans-serif;
 }
 
 :root {
@@ -17,7 +22,7 @@ body {
     --marrom-escuro: #603B25;
     --rosa: #F27C9C;
     --amarelo: #FDFAB5;
-    --preto:  #000;
+    --preto: #000;
     --branco: #F4F4F4;
     --fundo: #3d1b12;
     --marrom-claro-rgb: 129, 79, 49;
@@ -25,13 +30,13 @@ body {
     --altura-navbar: 94px;
     --largura-navbar: 1300px;
     --altura-onda: 40px;
-} 
+}
 
 
 /* cssd do alert */
 .swal2-toast.meu-toast-personalizado {
     padding: 12px 20px !important;
-    font-size: 1rem !important; 
+    font-size: 1rem !important;
     width: auto !important;
     max-width: 450px !important;
 }

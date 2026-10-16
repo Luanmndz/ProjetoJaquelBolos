@@ -1,12 +1,6 @@
-body {
-    background-color: #f4ede6;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .hero-confeitaria {
     background: linear-gradient(rgba(40, 20, 10, 0.68), rgba(40, 20, 10, 0.68)), url('../IMAGENS/BoloHero.png');
-    height: 100vh;
+    height: 91vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,27 +11,13 @@ body {
     overflow: hidden;
 }
 
-/* Container do texto à esquerda */
+
 .hero-conteudo {
     max-width: 550px;
     z-index: 2;
     text-align: center;
 }
 
-
-/* .caixa-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 800px; 
-    z-index: 2;
-} */
-
-/* .hero-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-} */
 
 .hero-selo {
     display: inline-block;
@@ -109,7 +89,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* DESTAQUES */
+
 .destaques {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -149,13 +129,13 @@ body {
     line-height: 1.5;
 }
 
-/* Responsivo para celulares */
-@media (max-width: 900px) {
+
+@media (max-width: 768px) {
     .hero-confeitaria {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        height: auto;
+        height: 100vh;
         padding: 80px 20px 40px 20px;
     }
 

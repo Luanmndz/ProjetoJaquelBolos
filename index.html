@@ -22,41 +22,42 @@
     <header class="cabecalho">
         <nav class="navbar">
 
-            <a class="link-logo" href="#Home">
-                <img class="imagemLogo" src="IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Bolos">
+            <a class="link-logo" href="./index.html">
+                <img class="imagemLogo" src="./IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Bolos">
             </a>
 
-            <button class="menu-hamburguer" aria-label="Abrir Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-direita">
 
-            <div class="menu-links">
-                <a class="link-navbar" href="#Cardapio">CARDÁPIO</a>
-                <a class="link-navbar" href="HTML/Historia.html">HISTORIA</a>
+                <div class="menu-links">
+                    <a class="link-navbar" href="#Cardapio">CARDÁPIO</a>
+                    <a class="link-navbar" href="./HTML/Historia.html">HISTÓRIA</a>
+                </div>
+
+                <button class="menu-hamburguer" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <section class="container-carrinho">
+                    <button id="btn-carrinho" class="btn-carrinho">
+                        <i class="bi bi-bag-fill"></i>
+                        <span id="contador-carrinho" class="contador-carrinho">0</span>
+                    </button>
+
+                    <div id="pop-up" class="pop-up">
+                        <h3> Carrinho </h3>
+                        <div class="itens-carrinho"></div>
+                        <div class="valorTotal"></div>
+                        <div class="pop-up-inferior">
+                            <button class="btnFinalizar"></button>
+                        </div>
+                    </div>
+                </section>
             </div>
-             <section class="container-carrinho">
 
-        <button id="btn-carrinho" class="btn-carrinho">
-            <i class="bi bi-bag-fill"></i>
-            <span id="contador-carrinho" class="contador-carrinho">0</span>
-        </button>
 
-        <div id="pop-up" class="pop-up">
-            <h3> Carrinho </h3>
-            <div class="itens-carrinho">
-
-            </div>
-            <div class="valorTotal">
-
-            </div>
-            <div class="pop-up-inferior">
-                <button class="btnFinalizar"></button>
-            </div>
-        </div>
-    </section>
         </nav>
+
     </header>
 
 
@@ -70,7 +71,7 @@
         </p>
         <div class="hero-botoes">
             <a href="#Cardapio" class="hero-btn hero-btn-principal">Ver cardápio</a>
-            <a href="#Historia" class="hero-btn hero-btn-secundario">Nossa História</a>
+            <a href="./HTML/Historia.html" class="hero-btn hero-btn-secundario">Nossa História</a>
         </div>
     </div>
            

@@ -1,29 +1,27 @@
 #btnSubir {
-    position: absolute; 
-    right: 20px;  
-    top: 50%;     
-    transform: translateY(-50%); 
-    width: 35px;     
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    width: 35px;
     height: 35px;
-    background-color: #2E1713; 
-    color: #F5ECDA;            
+    background-color: #2E1713;
+    color: #F5ECDA;
     border: 1px solid #F5EADD;
-    border-radius: 50%;       
+    border-radius: 50%;
     font-size: 14px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
 #btnSubir:hover {
-    background-color:var(--marrom-escuro);
-    transform: translateY(-50%) scale(1.1); 
+    background-color: var(--marrom-escuro);
+    transform: scale(1.1);
 }
-
 footer {
-    position: relative; 
+    position: relative;
 }
-
 .rodape {
     position: relative;
     width: 100%;
@@ -49,14 +47,72 @@ footer {
 }
 
 .rodape-conteudo {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto minmax(0, 1.7fr) minmax(0, 0.8fr);
     align-items: center;
-    gap: 24px;
     max-width: var(--largura-navbar, 1300px);
     margin: 0 auto;
     padding: 36px 40px 24px;
     box-sizing: border-box;
+}
+
+.rodape-menu,
+.rodape-diferenciais,
+.rodape-frase {
+    align-self: stretch;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    margin-left: 36px;
+    padding: 0 0 0 36px;
+}
+
+.rodape-marca {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.rodape-foto {
+    position: relative;
+    flex-shrink: 0;
+    width: 130px;
+    height: 130px;
+}
+
+.rodape-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    border: 3px solid var(--rosa, #F27C9C);
+    box-sizing: border-box;
+}
+
+.rodape-foto-coracao {
+    position: absolute;
+    right: -8px;
+    bottom: -8px;
+    width: 30px;
+    height: 30px;
+    fill: var(--rosa, #F27C9C);
+    stroke: var(--marrom-escuro, #603B25);
+    stroke-width: 1.2;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.rodape-foto:hover .rodape-foto-coracao {
+    transform: scale(1.12);
+}
+
+.rodape-marca-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    width: max-content;
 }
 
 .rodape-logo img {
@@ -71,34 +127,31 @@ footer {
     filter: brightness(1.2) sepia(0.3);
 }
 
-
-.rodape-local {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.icone-sp {
-    width: 26px;
-    height: 26px;
-    color: var(--rosa, #F27C9C);
+.rodape-slogan {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    max-width: 240px;
 }
 
 .rodape-redes {
     display: flex;
-    gap: 28px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
 }
 
 .rodape-rede {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 18px;
+    gap: 8px;
+    font-size: 15px;
     font-weight: 700;
     color: white;
     text-decoration: none;
+    white-space: nowrap;
     transition: color 0.3s ease;
 }
 
@@ -106,7 +159,6 @@ footer {
     color: var(--rosa);
 }
 
-/* Texto "WhatsApp" / "Instagram" cresce ao passar o mouse */
 .rodape-rede > span:last-child {
     display: inline-block;
     transition: transform 0.3s ease;
@@ -124,7 +176,7 @@ footer {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--marrom-escuro,);
+    background-color: var(--marrom-escuro, );
     transition: transform 0.3s ease;
 }
 
@@ -138,14 +190,167 @@ footer {
     object-fit: contain;
 }
 
-/* Direitos autorais */
+.rodape-rede + .rodape-rede {
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    padding-left: 18px;
+}
+
+.rodape-local {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.icone-sp {
+    width: 24px;
+    height: 24px;
+    color: var(--rosa, #F27C9C);
+}
+
+.rodape-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.rodape-menu a {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    transform-origin: left center;
+    width: fit-content;
+}
+
+.rodape-menu a:hover {
+    color: var(--rosa);
+    transform: scale(1.1);
+}
+
+.rodape-diferenciais {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.rodape-diferencial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.rodape-diferencial > span:last-child {
+    min-height: 2.6em;
+}
+
+.rodape-diferencial-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: var(--marrom-escuro, #603B25);
+    transition: transform 0.3s ease;
+}
+
+.rodape-diferencial:hover .rodape-diferencial-icone {
+    transform: scale(1.1);
+}
+
+.rodape-diferencial-icone svg {
+    width: 26px;
+    height: 26px;
+    fill: transparent;
+    stroke: var(--rosa, #F27C9C);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: fill 0.3s ease;
+}
+
+.rodape-diferencial:hover .rodape-diferencial-icone svg {
+    fill: var(--rosa, #F27C9C);
+}
+
+.rodape-diferencial:nth-child(2) .rodape-diferencial-icone path:nth-child(3) {
+    transition: stroke 0.3s ease;
+}
+
+.rodape-diferencial:nth-child(2):hover .rodape-diferencial-icone path:nth-child(3) {
+    stroke: var(--marrom-escuro, #603B25);
+}
+
+.rodape-frase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.rodape-frase p {
+    margin: 0;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.rodape-divisor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rodape-divisor span {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.rodape-divisor svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--rosa, #F27C9C);
+    stroke-width: 1.8;
+    stroke-linejoin: round;
+}
+
+.rodape-divisor-curto {
+    width: 100%;
+    max-width: 170px;
+}
+
 .rodape-direitos {
     max-width: var(--largura-navbar, 1300px);
     margin: 0 auto;
-    padding: 14px 40px 22px;
+    padding: 6px 40px 22px;
     box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
     text-align: center;
+}
+
+.rodape-direitos .rodape-divisor {
+    margin-bottom: 14px;
 }
 
 .rodape-direitos p {
@@ -155,21 +360,104 @@ footer {
     color: #FFFFFF;
 }
 
-/* --- Celulares e tablets --- */
+@media (max-width: 1300px) {
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 44px;
+    }
+
+    .rodape-marca {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+    .rodape-menu {
+        border-left: none;
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .rodape-diferenciais {
+        margin-left: 0;
+    }
+
+    .rodape-frase {
+        grid-column: 1 / -1;
+        align-self: auto;
+        border-left: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .rodape-conteudo {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
         padding: 28px 24px 18px;
-        gap: 18px;
+        row-gap: 32px;
+    }
+
+    .rodape-marca {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .rodape-marca-texto {
+        width: auto;
     }
 
     .rodape-redes {
-        flex-direction: column;
-        gap: 14px;
+        flex-wrap: wrap;
+        gap: 14px 18px;
+    }
+
+    .rodape-rede + .rodape-rede {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .rodape-menu,
+    .rodape-diferenciais,
+    .rodape-frase {
+        align-self: auto;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        margin-left: 0;
+        padding: 24px 0 0;
+    }
+
+    .rodape-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 28px;
+    }
+
+    .rodape-diferenciais {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .rodape-diferencial {
+        flex: 0 1 110px;
     }
 
     .rodape-direitos {
-        padding: 14px 24px 20px;
+        padding: 6px 24px 64px;
+    }
+
+    #btnSubir {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 16px;
+    }
+
+    #btnSubir:hover {
+        transform: translateX(50%) scale(1.1);
     }
 }

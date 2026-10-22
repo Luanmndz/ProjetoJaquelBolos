@@ -1,28 +1,43 @@
-// Controla a visibilidade do botão de subir ao topo com base no scroll
-window.onscroll = function() {
-    var botao = document.getElementById("btnSubir");
+// botao de subir
+window.addEventListener('scroll', () => {
+    let botao = document.getElementById("btnSubir");
     if (!botao) return;
+
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         botao.style.display = "block";
     } else {
         botao.style.display = "none";
     }
-};
+});
 
-// Função de animação suave para voltar ao topo
-let animacaoScroll;
 function subirSuave() {
-    const posicaoAtual = document.documentElement.scrollTop || document.body.scrollTop;
-
-    if (posicaoAtual < 1) {
-        window.scrollTo({ top: 0, behavior: 'instant' });
-        cancelAnimationFrame(animacaoScroll);
-        return; 
-    }
-
-    window.scrollTo({ top: posicaoAtual - posicaoAtual / 14, behavior: 'instant' });
-    animacaoScroll = window.requestAnimationFrame(subirSuave);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
+// parte da responsividade
+const hamburger = document.querySelector('.menu-hamburguer');
+const menuLinks = document.querySelector('.menu-links');
+const links = document.querySelectorAll('.link-navbar');
 
-window.addEventListener('wheel', () => cancelAnimationFrame(animacaoScroll));
-window.addEventListener('touchmove', () => cancelAnimationFrame(animacaoScroll));
+if (hamburger && menuLinks) {
+    hamburger.addEventListener('click', () => {
+        menuLinks.classList.toggle('ativo');
+        hamburger.classList.toggle('ativo'); 
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            menuLinks.classList.remove('ativo');
+            hamburger.classList.remove('ativo');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!menuLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            menuLinks.classList.remove('ativo');
+            hamburger.classList.remove('ativo');
+        }
+    });
+}

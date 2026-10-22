@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaquel Bolos</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/nav.css">
-    <link rel="stylesheet" href="CSS/carrinho.css">
-    <link rel="stylesheet" href="CSS/cardapio.css">
-    <link rel="stylesheet" href="CSS/hero.css">
-    <link rel="stylesheet" href="CSS/footer.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="shortcut icon" href="IMAGENS/LOGO/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/nav.css">
+    <link rel="stylesheet" href="./CSS/carrinho.css">
+    <link rel="stylesheet" href="./CSS/cardapio.css">
+    <link rel="stylesheet" href="./CSS/hero.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
+
+    <link rel="shortcut icon" href="./IMAGENS/LOGO/BOLOS 3.0.png" type="image/x-icon">
 </head>
 
 <body>
@@ -22,7 +29,7 @@
         <nav class="navbar">
 
             <a class="link-logo" href="./index.html">
-                <img class="imagemLogo" src="./IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Bolos" width="150" height="50">
+                <img class="imagemLogo" src="./IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Bolos" width="100" height="50">
             </a>
 
             <div class="nav-direita">
@@ -38,7 +45,7 @@
                     <span></span>
                 </button>
                 <section class="container-carrinho">
-                    <button id="btn-carrinho" class="btn-carrinho">
+                    <button id="btn-carrinho" class="btn-carrinho" aria-label="Ver carrinho">
                         <i class="bi bi-bag-fill"></i>
                         <span id="contador-carrinho" class="contador-carrinho">0</span>
                     </button>
@@ -48,18 +55,15 @@
                         <div class="itens-carrinho"></div>
                         <div class="valorTotal"></div>
                         <div class="pop-up-inferior">
-                            <button class="btnFinalizar"></button>
+                            <button class="btnFinalizar">Finalizar Compra</button>
                         </div>
                     </div>
                 </section>
             </div>
 
         </nav>
-
     </header>
 
-
-    <!-- ESTRUTURA HOME -->
     <section id="Home" class="hero-confeitaria">
         <div class="hero-conteudo">
             <span class="hero-selo">Confeitaria Artesanal</span>
@@ -74,8 +78,6 @@
         </div>
     </section>
 
-
-    <!-- ESTRUTURA CARDAPIO -->
     <section id="Cardapio">
 
         <div class="text-cardapio">
@@ -115,7 +117,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="rodape">
         <div class="rodape-conteudo">
 
@@ -130,24 +131,22 @@
 
                 <div class="rodape-marca-texto">
                     <a class="rodape-logo" href="#Home">
-                        <img src="IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Jaquel Bolos" width="120" height="40">
+                        <img src="./IMAGENS/LOGO/BOLOS 3.0.png" alt="Logo Jaquel Bolos" width="120" height="40" loading="lazy">
                     </a>
 
                     <p class="rodape-slogan">Onde cada doce conta uma história.</p>
 
                     <div class="rodape-redes">
-                        <a class="rodape-rede" href="https://wa.me/5511987654321" target="_blank"
-                            rel="noopener noreferrer">
+                        <a class="rodape-rede" href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer">
                             <span class="rodape-rede-icone">
-                                <img src="IMAGENS/ICONES/whatsapp.png" alt="WhatsApp" width="20" height="20">
+                                <img src="./IMAGENS/ICONES/whatsapp.png" alt="WhatsApp" width="20" height="20" loading="lazy">
                             </span>
                             <span>(11) 98765-4321</span>
                         </a>
 
-                        <a class="rodape-rede" href="https://instagram.com/jaquelbolos" target="_blank"
-                            rel="noopener noreferrer">
+                        <a class="rodape-rede" href="https://instagram.com/jaquelbolos" target="_blank" rel="noopener noreferrer">
                             <span class="rodape-rede-icone">
-                                <img src="IMAGENS/ICONES/instagram.png" alt="Instagram" width="20" height="20">
+                                <img src="./IMAGENS/ICONES/instagram.png" alt="Instagram" width="20" height="20" loading="lazy">
                             </span>
                             <span>@jaquelbolos</span>
                         </a>
@@ -155,8 +154,7 @@
 
                     <div class="rodape-local">
                         <svg class="icone-sp" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill="currentColor"
-                                d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+                            <path fill="currentColor" d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
                         </svg>
                         <span>São Paulo - SP</span>
                     </div>
@@ -168,7 +166,7 @@
                 <a href="#Cardapio">Cardápio</a>
                 <a href="./HTML/Historia.html">História</a>
             </nav>
-        
+
             <div class="rodape-diferenciais">
                 <div class="rodape-diferencial">
                     <span class="rodape-diferencial-icone">
@@ -201,7 +199,7 @@
                     <span>Ingredientes selecionados</span>
                 </div>
             </div>
-            
+
             <div class="rodape-frase">
                 <p>Feito à mão, com amor, delicadeza e dedicação em cada detalhe.</p>
                 <div class="rodape-divisor rodape-divisor-curto">
@@ -228,13 +226,12 @@
         <button id="btnSubir" onclick="subirSuave()" aria-label="Voltar ao topo">▲</button>
     </footer>
 
-    <!-- Scripts JavaScript com o atributo 'defer' aplicado -->
-    <script src="JS/carrinho.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="JS/forms.js" defer></script>
+    <script src="./JS/carrinho.js" defer></script>
+    <script src="./JS/forms.js" defer></script>
     <script src="./JS/responsividade.js" defer></script>
-    <script src="JS/whatsap.js" defer></script>
-    <script src="./JS/main.js"></script>
+    <script src="./JS/whatsap.js" defer></script>
+    <script src="./JS/main.js" defer></script>
 
 </body>
 

@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 @font-face {
     font-family: 'SnowWhite';
-    src: url(../FONTES/Snowwhite.otf);
+    src: url('../FONTES/Snowwhite.otf');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -32,15 +35,13 @@ body {
     --altura-onda: 40px;
 }
 
-
-/* cssd do alert */
+/* Estilos do SweetAlert2 Toast */
 .swal2-toast.meu-toast-personalizado {
     padding: 12px 20px !important;
     font-size: 1rem !important;
     width: auto !important;
     max-width: 450px !important;
 }
-
 
 .swal2-toast.meu-toast-personalizado .swal2-title {
     font-size: 1rem !important;

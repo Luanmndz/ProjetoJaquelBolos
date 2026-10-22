@@ -7,7 +7,7 @@ hamburger.addEventListener('click', () => {
     menuLinks.classList.toggle('ativo');
 });
 
-// Fecha o menu automaticamente ao clicar em um link
+
 links.forEach(link => {
     link.addEventListener('click', () => {
         menuLinks.classList.remove('ativo');

@@ -96,10 +96,20 @@ function atualizarCarrinho() {
             `;
         }
 
+        // Corrige o caminho da imagem dependendo de onde o carrinho está sendo aberto
+        let caminhoCorrigido = item.img;
+        if (estamosNaIndex) {
+            caminhoCorrigido = caminhoCorrigido.replace(/^(\.\.\/)+/, '');
+        } else {
+            if (!caminhoCorrigido.startsWith('../') && !caminhoCorrigido.startsWith('http')) {
+                caminhoCorrigido = '../' + caminhoCorrigido;
+            }
+        }
+
         itens.innerHTML += `
             <div class="item-carrinho"> 
                 <div class="container-img">
-                    <img src="${item.img}" class="img-produto" alt="${item.nome}"> 
+                    <img src="${caminhoCorrigido}" class="img-produto" alt="${item.nome}"> 
                 </div>
 
                 <div class="info-item">
